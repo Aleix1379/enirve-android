@@ -67,26 +67,18 @@
                 android:text="@string/textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintTop_toBottomOf="@+id/textViewDurationTypeDescription"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toTopOf="@+id/optionValueContainer"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:textStyle="bold"
                 android:fontFamily="@font/lato" android:textColor="@color/secondaryTextColor" android:textSize="20sp"/>
-        <!--<View
-                android:layout_width="wrap_content"
-                android:layout_height="50dp" android:id="@+id/view"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                android:layout_marginTop="32dp"
-                app:layout_constraintTop_toBottomOf="@+id/txtOptionDescription"
-                android:background="@drawable/rectangle">
-        </View>-->
 
 
-        <RelativeLayout android:layout_width="match_parent" android:layout_height="51dp"
-                        android:layout_marginTop="32dp"
-                        app:layout_constraintTop_toBottomOf="@+id/txtOptionDescription"
-                        android:background="@drawable/rectangle">
+        <RelativeLayout android:id="@+id/optionValueContainer"
+                        android:layout_width="match_parent" android:layout_height="50dp"
+                        android:layout_marginBottom="32dp"
+                        app:layout_constraintBottom_toTopOf="@id/btnNextHome"
+                        android:background="@drawable/rectangle" tools:layout_editor_absoluteX="32dp">
 
 
             <Button
@@ -131,7 +123,7 @@
         <Button
                 android:text="@string/home_page_next"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/button5"
+                android:layout_height="50dp" android:id="@+id/btnNextHome"
                 android:layout_marginBottom="32dp"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
