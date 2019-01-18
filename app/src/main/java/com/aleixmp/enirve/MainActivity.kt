@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity(),
     IrregularVerbsFragment.OnFragmentInteractionListener,
     ProfileFragment.OnFragmentInteractionListener {
 
-    private val TAG = "IrregularVerbs"
+    private val mTAG = "IrregularVerbs"
 
     override fun onFragmentInteraction(uri: Uri) {
-        Log.d(TAG, "onFragmentInteraction uri")
-        Log.d(TAG, "$uri")
+        Log.d(mTAG, "onFragmentInteraction uri")
+        Log.d(mTAG, "$uri")
     }
 
 

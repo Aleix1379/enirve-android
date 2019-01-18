@@ -4,8 +4,8 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="app_title">Irregular verbs</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="time_description">With this option you choose how long is the exercise in minutes, for example if you want to practise for 5 minutes this is your choose</string>
+    <string name="repetitions_description">With this option you choose how many times you want to practise each verb, for example if you want to do each verb 2 times this is your choose</string>
     <string name="hello_blank_fragment">Hello irregular verbs fragment</string>
     <string name="hello_profile_fragment">Profile page</string>
     <string name="iv_title">Duration type</string>

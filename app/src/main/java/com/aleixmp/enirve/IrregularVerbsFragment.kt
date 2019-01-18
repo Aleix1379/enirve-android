@@ -13,26 +13,13 @@ import android.widget.RadioButton
 import android.widget.TextView
 import info.hoang8f.android.segmented.SegmentedGroup
 
-private const val timeDescription =
-    "With this option you choose how long is the exercise in minutes, for example if you want to practise for 5 minutes this is your choose"
-
-private const val repetitionsDescription =
-    "With this option you choose how many times you want to practise each verb, for example if you want to do each verb 2 times this is your choose"
-
 private const val timeOption = "Select the minutes"
 private const val repetitionOption = "Select the number of repetitions"
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [IrregularVerbsFragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [IrregularVerbsFragment.newInstance] factory method to
- * create an instance of this fragment.
- *
- */
 class IrregularVerbsFragment : Fragment(), View.OnClickListener {
     private val mTAG = "IrregularVerbsFragment"
+    private var timeDescription: String = ""
+    private var repetitionsDescription: String = ""
 
     private var mListener: OnFragmentInteractionListener? = null
 
@@ -44,16 +31,18 @@ class IrregularVerbsFragment : Fragment(), View.OnClickListener {
     private var mBtnOptionAdd: Button? = null
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         activity?.title = resources.getString(R.string.app_title)
+        timeDescription = resources.getString(R.string.time_description)
+        repetitionsDescription = resources.getString(R.string.repetitions_description)
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_irregular_verbs, container, false)
-
 
         mSegmentedGroup = view.findViewById(R.id.segmented_duration_type)
         mTxtDurationTypeDescription = view.findViewById(R.id.textViewDurationTypeDescription) as TextView
@@ -101,11 +90,6 @@ class IrregularVerbsFragment : Fragment(), View.OnClickListener {
         mTxtOptionDescription?.text = timeOption
     }
 
-/*    // TODO: Rename method, update argument and hook method into UI event
-    fun onButtonPressed(uri: Uri) {
-        mListener?.onFragmentInteraction(uri)
-    }*/
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is OnFragmentInteractionListener) {
@@ -120,35 +104,12 @@ class IrregularVerbsFragment : Fragment(), View.OnClickListener {
         mListener = null
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     *
-     *
-     * See the Android Training lesson [Communicating with Other Fragments]
-     * (http://developer.android.com/training/basics/fragments/communicating.html)
-     * for more information.
-     */
     interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         fun onFragmentInteraction(uri: Uri)
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @return A new instance of fragment IrregularVerbsFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance() =
-            IrregularVerbsFragment().apply {
-                arguments = Bundle().apply {
-                }
-            }
+        fun newInstance() = IrregularVerbsFragment()
     }
 }
