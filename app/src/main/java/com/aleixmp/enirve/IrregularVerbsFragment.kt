@@ -8,21 +8,19 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.RadioButton
 import android.widget.TextView
 import info.hoang8f.android.segmented.SegmentedGroup
-
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 private const val timeDescription =
     "With this option you choose how long is the exercise in minutes, for example if you want to practise for 5 minutes this is your choose"
 
 private const val repetitionsDescription =
     "With this option you choose how many times you want to practise each verb, for example if you want to do each verb 2 times this is your choose"
+
+private const val timeOption = "Select the minutes"
+private const val repetitionOption = "Select the number of repetitions"
 
 /**
  * A simple [Fragment] subclass.
@@ -33,60 +31,85 @@ private const val repetitionsDescription =
  * create an instance of this fragment.
  *
  */
-class IrregularVerbsFragment : Fragment() {
-    private val TAG = "IrregularVerbsFragment"
+class IrregularVerbsFragment : Fragment(), View.OnClickListener {
+    private val mTAG = "IrregularVerbsFragment"
 
+    private var mListener: OnFragmentInteractionListener? = null
 
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-    private var listener: OnFragmentInteractionListener? = null
+    private var mSegmentedGroup: SegmentedGroup? = null
+    private var mTxtDurationTypeDescription: TextView? = null
+    private var mTxtOptionDescription: TextView? = null
+    private var mTxtOptionValue: TextView? = null
+    private var mBtnOptionMinus: Button? = null
+    private var mBtnOptionAdd: Button? = null
 
-    private var segmentedGroup: SegmentedGroup? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
 
+        activity?.title = resources.getString(R.string.app_title)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_irregular_verbs, container, false)
-        val txtDurationTypeDescription: TextView
 
-        segmentedGroup = view.findViewById(R.id.segmented_duration_type)
-        txtDurationTypeDescription = view.findViewById(R.id.textViewDurationTypeDescription) as TextView
-        txtDurationTypeDescription.text = timeDescription
 
-        segmentedGroup!!.setOnCheckedChangeListener { group, checkedId: Int ->
+        mSegmentedGroup = view.findViewById(R.id.segmented_duration_type)
+        mTxtDurationTypeDescription = view.findViewById(R.id.textViewDurationTypeDescription) as TextView
+        mTxtOptionDescription = view.findViewById(R.id.txtOptionDescription) as TextView
+        mTxtOptionValue= view.findViewById(R.id.txtOptionValue) as TextView
+        mBtnOptionMinus = view.findViewById(R.id.btnOptionValueMinus) as Button
+        mBtnOptionAdd = view.findViewById(R.id.btnOptionValueAdd) as Button
+
+        setTextTimeOption()
+
+        mSegmentedGroup!!.setOnCheckedChangeListener { _, checkedId: Int ->
             val radioTime: RadioButton = view.findViewById(R.id.segmented_duration_type_time)
 
             if (radioTime.id == checkedId) {
-                Log.d(TAG, "By time...")
-                txtDurationTypeDescription.text = timeDescription
+                Log.d(mTAG, "By time...")
+                setTextTimeOption()
             } else {
-                Log.d(TAG, "By number of repetitions...")
-                txtDurationTypeDescription.text = repetitionsDescription
+                Log.d(mTAG, "By number of repetitions...")
+                mTxtDurationTypeDescription?.text = repetitionsDescription
+                mTxtOptionDescription?.text = repetitionOption
             }
 
         }
 
+        mBtnOptionMinus?.setOnClickListener(this)
+        mBtnOptionAdd?.setOnClickListener(this)
+
         return view
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    fun onButtonPressed(uri: Uri) {
-        listener?.onFragmentInteraction(uri)
+    override fun onClick(v: View?) {
+        v?.let {
+            var value: Int = mTxtOptionValue!!.text.toString().toInt()
+            if (it.tag == "minus" && value > 1) {
+                value--
+            } else if (it.tag == "add") {
+                value++
+            }
+            mTxtOptionValue!!.text = value.toString()
+        }
     }
+
+    private fun setTextTimeOption() {
+        mTxtDurationTypeDescription?.text = timeDescription
+        mTxtOptionDescription?.text = timeOption
+    }
+
+/*    // TODO: Rename method, update argument and hook method into UI event
+    fun onButtonPressed(uri: Uri) {
+        mListener?.onFragmentInteraction(uri)
+    }*/
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is OnFragmentInteractionListener) {
-            listener = context
+            mListener = context
         } else {
             throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
         }
@@ -94,7 +117,7 @@ class IrregularVerbsFragment : Fragment() {
 
     override fun onDetach() {
         super.onDetach()
-        listener = null
+        mListener = null
     }
 
     /**

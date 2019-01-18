@@ -11,4 +11,9 @@
     <string name="iv_title">Duration type</string>
     <string name="iv_duration_type_time">Time</string>
     <string name="iv_duration_type_repetitions">Repetitions</string>
+    <string name="textview">TextView</string>
+    <string name="minus">-</string>
+    <string name="add">+</string>
+    <string name="default_value_option">1</string>
+    <string name="home_page_next">Next</string>
 </resources>

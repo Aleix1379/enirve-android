@@ -7,9 +7,12 @@
         <color name="secondaryColor">#FFA526</color>
         <color name="secondaryLightColor">#FFD85B</color>
         <color name="secondaryDarkColor">#C67700</color>
-        <color name="secondaryTextColor">#000000</color>
+        <color name="secondaryTextColor">#222222</color>
         <color name="primaryGreen">#4CAF4F</color>
         <color name="primaryRed">#F44235</color>
+        <color name="whiteColor">#FFFFFF</color>
+        <color name="blackColor">#222222</color>
+        <color name="darkColor">#424242</color>
 </resources>
 
 
