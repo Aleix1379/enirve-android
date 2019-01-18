@@ -11,9 +11,10 @@
             android:layout_height="match_parent" android:paddingLeft="32dp" android:paddingRight="32dp">
 
         <TextView
+                android:id="@+id/text_duration_type"
                 android:text="@string/iv_title"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/textView"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +24,7 @@
 
         <info.hoang8f.android.segmented.SegmentedGroup
                 xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/segmented_duration_type"
+                android:id="@+id/sg_duration_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -34,10 +35,10 @@
                 android:layout_marginEnd="8dp"
                 segmentedgroup:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
                 segmentedgroup:layout_constraintStart_toStartOf="parent" android:layout_marginTop="32dp"
-                segmentedgroup:layout_constraintTop_toBottomOf="@+id/textView">
+                segmentedgroup:layout_constraintTop_toBottomOf="@+id/text_duration_type">
 
             <RadioButton
-                    android:id="@+id/segmented_duration_type_time"
+                    android:id="@+id/rb_duration_type_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/iv_duration_type_time"
@@ -45,44 +46,45 @@
                     style="@style/RadioButton"/>
 
             <RadioButton
-                    android:id="@+id/segmented_duration_type_repetitions"
+                    android:id="@+id/rb_duration_type_repetitions"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/iv_duration_type_repetitions"
                     style="@style/RadioButton"/>
         </info.hoang8f.android.segmented.SegmentedGroup>
         <TextView
+                android:id="@+id/text_duration_type_description"
                 android:text="@string/textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewDurationTypeDescription" android:layout_marginTop="32dp"
-                app:layout_constraintTop_toBottomOf="@+id/segmented_duration_type"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/sg_duration_type"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
                 android:paddingLeft="32dp" android:paddingRight="32dp" android:textAlignment="viewStart"
                 android:fontFamily="@font/lato" android:textSize="18sp" android:textColor="@color/secondaryTextColor"
                 app:lineHeight="25dp"/>
         <TextView
-                android:id="@+id/txtOptionDescription"
+                android:id="@+id/text_option_description"
                 android:text="@string/textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="32dp"
-                app:layout_constraintBottom_toTopOf="@+id/optionValueContainer"
+                app:layout_constraintBottom_toTopOf="@+id/rl_option_value_container"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:textStyle="bold"
                 android:fontFamily="@font/lato" android:textColor="@color/secondaryTextColor" android:textSize="20sp"/>
 
 
-        <RelativeLayout android:id="@+id/optionValueContainer"
+        <RelativeLayout android:id="@+id/rl_option_value_container"
                         android:layout_width="match_parent" android:layout_height="50dp"
                         android:layout_marginBottom="32dp"
-                        app:layout_constraintBottom_toTopOf="@id/btnNextHome"
+                        app:layout_constraintBottom_toTopOf="@id/button_next_home"
                         android:background="@drawable/rectangle" tools:layout_editor_absoluteX="32dp">
 
 
             <Button
-                    android:id="@+id/btnOptionValueMinus"
+                    android:id="@+id/button_option_value_minus"
                     android:text="@string/minus"
                     android:layout_width="wrap_content"
                     android:background="@android:color/transparent"
@@ -93,20 +95,21 @@
                     android:layout_height="wrap_content" android:layout_marginStart="0dp"
                     android:tag="minus"/>
             <TextView
+                    android:id="@+id/text_option_value"
                     android:text="@string/default_value_option"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/txtOptionValue"
+                    android:layout_height="wrap_content"
                     android:textSize="30sp"
                     android:width="50dp"
                     android:textAlignment="center"
                     android:gravity="center_vertical"
                     android:textColor="@color/darkColor"
-                    android:layout_toStartOf="@+id/btnOptionValueAdd" android:layout_marginEnd="0dp"
-                    android:layout_toEndOf="@+id/btnOptionValueMinus" android:layout_marginStart="0dp"
+                    android:layout_toStartOf="@+id/button_option_value_add" android:layout_marginEnd="0dp"
+                    android:layout_toEndOf="@+id/button_option_value_minus" android:layout_marginStart="0dp"
                     android:layout_alignParentBottom="true" android:layout_marginBottom="0dp"
                     android:layout_marginTop="0dp" android:layout_alignParentTop="true"/>
             <Button
-                    android:id="@+id/btnOptionValueAdd"
+                    android:id="@+id/button_option_value_add"
                     android:text="@string/add"
                     android:layout_width="wrap_content"
                     android:background="@android:color/transparent"
@@ -121,9 +124,10 @@
         </RelativeLayout>
 
         <Button
+                android:id="@+id/button_next_home"
                 android:text="@string/home_page_next"
                 android:layout_width="match_parent"
-                android:layout_height="50dp" android:id="@+id/btnNextHome"
+                android:layout_height="50dp"
                 android:layout_marginBottom="32dp"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

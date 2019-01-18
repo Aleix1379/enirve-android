@@ -44,17 +44,17 @@ class IrregularVerbsFragment : Fragment(), View.OnClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_irregular_verbs, container, false)
 
-        mSegmentedGroup = view.findViewById(R.id.segmented_duration_type)
-        mTxtDurationTypeDescription = view.findViewById(R.id.textViewDurationTypeDescription) as TextView
-        mTxtOptionDescription = view.findViewById(R.id.txtOptionDescription) as TextView
-        mTxtOptionValue= view.findViewById(R.id.txtOptionValue) as TextView
-        mBtnOptionMinus = view.findViewById(R.id.btnOptionValueMinus) as Button
-        mBtnOptionAdd = view.findViewById(R.id.btnOptionValueAdd) as Button
+        mSegmentedGroup = view.findViewById(R.id.sg_duration_type)
+        mTxtDurationTypeDescription = view.findViewById(R.id.text_duration_type_description) as TextView
+        mTxtOptionDescription = view.findViewById(R.id.text_option_description) as TextView
+        mTxtOptionValue= view.findViewById(R.id.text_option_value) as TextView
+        mBtnOptionMinus = view.findViewById(R.id.button_option_value_minus) as Button
+        mBtnOptionAdd = view.findViewById(R.id.button_option_value_add) as Button
 
         setTextTimeOption()
 
         mSegmentedGroup!!.setOnCheckedChangeListener { _, checkedId: Int ->
-            val radioTime: RadioButton = view.findViewById(R.id.segmented_duration_type_time)
+            val radioTime: RadioButton = view.findViewById(R.id.rb_duration_type_time)
 
             if (radioTime.id == checkedId) {
                 Log.d(mTAG, "By time...")
