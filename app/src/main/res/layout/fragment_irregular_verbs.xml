@@ -3,7 +3,7 @@
              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".IrregularVerbsFragment">
+             tools:context=".ui.IrregularVerbsFragment">
 
 
     <android.support.constraint.ConstraintLayout
@@ -42,6 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/iv_duration_type_time"
+                    android:tag="time"
                     android:checked="true"
                     style="@style/RadioButton"/>
 
@@ -50,6 +51,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/iv_duration_type_repetitions"
+                    android:tag="repetitions"
                     style="@style/RadioButton"/>
         </info.hoang8f.android.segmented.SegmentedGroup>
         <TextView
@@ -126,6 +128,7 @@
         <Button
                 android:id="@+id/button_next_home"
                 android:text="@string/home_page_next"
+                android:tag="next"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="32dp"

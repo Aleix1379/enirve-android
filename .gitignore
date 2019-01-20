@@ -75,3 +75,13 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+\.idea/
+
+app/src/main/\.DS_Store
+
+app/src/main/res/\.DS_Store
+
+app/src/main/res/drawable/\.DS_Store
+
+app/src/main/res/drawable-v24/\.DS_Store

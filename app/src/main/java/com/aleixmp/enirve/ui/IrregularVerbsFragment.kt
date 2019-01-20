@@ -1,16 +1,17 @@
-package com.aleixmp.enirve
+package com.aleixmp.enirve.ui
 
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.RadioButton
 import android.widget.TextView
+import com.aleixmp.enirve.R
 import info.hoang8f.android.segmented.SegmentedGroup
 
 private const val timeOption = "Select the minutes"
@@ -29,7 +30,7 @@ class IrregularVerbsFragment : Fragment(), View.OnClickListener {
     private var mTxtOptionValue: TextView? = null
     private var mBtnOptionMinus: Button? = null
     private var mBtnOptionAdd: Button? = null
-
+    private var mBtnNextHome: Button? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,47 +48,57 @@ class IrregularVerbsFragment : Fragment(), View.OnClickListener {
         mSegmentedGroup = view.findViewById(R.id.sg_duration_type)
         mTxtDurationTypeDescription = view.findViewById(R.id.text_duration_type_description) as TextView
         mTxtOptionDescription = view.findViewById(R.id.text_option_description) as TextView
-        mTxtOptionValue= view.findViewById(R.id.text_option_value) as TextView
+        mTxtOptionValue = view.findViewById(R.id.text_option_value) as TextView
         mBtnOptionMinus = view.findViewById(R.id.button_option_value_minus) as Button
         mBtnOptionAdd = view.findViewById(R.id.button_option_value_add) as Button
+        mBtnNextHome = view.findViewById(R.id.button_next_home) as Button
 
-        setTextTimeOption()
+        setDescriptionDurationType(timeDescription ,timeOption)
 
         mSegmentedGroup!!.setOnCheckedChangeListener { _, checkedId: Int ->
             val radioTime: RadioButton = view.findViewById(R.id.rb_duration_type_time)
 
             if (radioTime.id == checkedId) {
-                Log.d(mTAG, "By time...")
-                setTextTimeOption()
+                setDescriptionDurationType(timeDescription ,timeOption)
             } else {
-                Log.d(mTAG, "By number of repetitions...")
-                mTxtDurationTypeDescription?.text = repetitionsDescription
-                mTxtOptionDescription?.text = repetitionOption
+                setDescriptionDurationType(repetitionsDescription ,repetitionOption)
             }
 
         }
 
         mBtnOptionMinus?.setOnClickListener(this)
         mBtnOptionAdd?.setOnClickListener(this)
+        mBtnNextHome?.setOnClickListener(this)
 
         return view
     }
 
     override fun onClick(v: View?) {
         v?.let {
-            var value: Int = mTxtOptionValue!!.text.toString().toInt()
-            if (it.tag == "minus" && value > 1) {
-                value--
-            } else if (it.tag == "add") {
-                value++
+            if (it.tag == "next") {
+                val buttonIdChecked = mSegmentedGroup!!.checkedRadioButtonId
+                val button: Button = view?.findViewById(buttonIdChecked) as Button
+
+                val intent = Intent(context, SelectionVerbsActivity::class.java)
+                intent.putExtra(SelectionVerbsActivity.DURATION_TYPE, button.tag.toString())
+                intent.putExtra(SelectionVerbsActivity.DURATION_VALUE, mTxtOptionValue!!.text)
+                startActivity(intent)
+            } else {
+                var value: Int = mTxtOptionValue!!.text.toString().toInt()
+
+                if (it.tag == "minus" && value > 1) {
+                    value--
+                } else if (it.tag == "add") {
+                    value++
+                }
+                mTxtOptionValue!!.text = value.toString()
             }
-            mTxtOptionValue!!.text = value.toString()
         }
     }
 
-    private fun setTextTimeOption() {
-        mTxtDurationTypeDescription?.text = timeDescription
-        mTxtOptionDescription?.text = timeOption
+    private fun setDescriptionDurationType(description: String, option: String) {
+        mTxtDurationTypeDescription?.text = description
+        mTxtOptionDescription?.text = option
     }
 
     override fun onAttach(context: Context) {

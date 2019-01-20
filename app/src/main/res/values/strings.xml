@@ -4,8 +4,12 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="app_title">Irregular verbs</string>
-    <string name="time_description">With this option you choose how long is the exercise in minutes, for example if you want to practise for 5 minutes this is your choose</string>
-    <string name="repetitions_description">With this option you choose how many times you want to practise each verb, for example if you want to do each verb 2 times this is your choose</string>
+    <string name="time_description">With this option you choose how long is the exercise in minutes, for example if you
+        want to practise for 5 minutes this is your choose
+    </string>
+    <string name="repetitions_description">With this option you choose how many times you want to practise each verb,
+        for example if you want to do each verb 2 times this is your choose
+    </string>
     <string name="hello_blank_fragment">Hello irregular verbs fragment</string>
     <string name="hello_profile_fragment">Profile page</string>
     <string name="iv_title">Duration type</string>
@@ -16,4 +20,14 @@
     <string name="add">+</string>
     <string name="default_value_option">1</string>
     <string name="home_page_next">Next</string>
+    <string name="mode_choose_verbs_title">Mode choose the verbs</string>
+    <string name="mode_choose_verbs_manual">Manual</string>
+    <string name="mode_choose_verbs_random">Random</string>
+    <string name="mode_choose_verbs_by_level">By level</string>
+    <string name="mode_choose_verbs_all">All</string>
+    <string name="mode_choose_verbs_manual_description">Manually choose the verbs that you want to practice</string>
+    <string name="mode_choose_verbs_random_description">The verbs are selected random, you just need to enter the number of verbs to practise</string>
+    <string name="mode_choose_verbs_all_description">You will practise with all verbs of the app</string>
+    <string name="mode_choose_verbs_by_level_description">You will can choose the verbs by level of difficulty</string>
+
 </resources>

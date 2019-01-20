@@ -1,4 +1,4 @@
-package com.aleixmp.enirve
+package com.aleixmp.enirve.ui
 
 import android.net.Uri
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentTransaction
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import com.aleixmp.enirve.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),
@@ -46,7 +47,10 @@ class MainActivity : AppCompatActivity(),
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
         val transaction: FragmentTransaction  = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.frame_layout, IrregularVerbsFragment.newInstance())
+        transaction.replace(
+            R.id.frame_layout,
+            IrregularVerbsFragment.newInstance()
+        )
         transaction.commit()
     }
 }
