@@ -31,7 +31,7 @@
             segmentedgroup:sc_checked_text_color="@color/secondaryTextColor"
             android:layout_marginEnd="8dp"
             segmentedgroup:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-            segmentedgroup:layout_constraintStart_toStartOf="parent" android:layout_marginTop="32dp"
+            segmentedgroup:layout_constraintStart_toStartOf="parent" android:layout_marginTop="24dp"
             segmentedgroup:layout_constraintTop_toBottomOf="@+id/text_mode_choose_verbs">
 
         <RadioButton
@@ -74,12 +74,46 @@
             android:text="@string/textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/sg_mode_choose_verbs"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             android:paddingLeft="32dp" android:paddingRight="32dp" android:textAlignment="viewStart"
             android:fontFamily="@font/lato" android:textSize="18sp" android:textColor="@color/secondaryTextColor"
             app:lineHeight="25dp"/>
+
+    <!-- FRAGMENT -->
+
+    <FrameLayout
+            android:id="@+id/frame_layout_choose_verbs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/text_mode_choose_verbs_description"
+            android:animateLayoutChanges="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_mode_choose_verbs_description"
+            app:layout_constraintBottom_toTopOf="@+id/button_next_choose_verbs"
+            tools:layout_editor_absoluteX="32dp"
+            >
+
+    </FrameLayout>
+
+    <Button android:id="@+id/button_next_choose_verbs"
+            android:text="@string/mode_choose_verbs_next"
+            android:tag="next"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/secondaryColor"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/lato"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+    <!-- -->
 
 </android.support.constraint.ConstraintLayout>

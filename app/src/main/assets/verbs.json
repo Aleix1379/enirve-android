@@ -1,0 +1,1654 @@
+[
+  {
+    "id": 1,
+    "verb": "arise",
+    "simple": "arose",
+    "participle": "arisen",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "surgir"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "verb": "be",
+    "simple": "was / were",
+    "participle": "been",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "ser"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "verb": "beat",
+    "simple": "beat",
+    "participle": "beaten",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "golpear"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "verb": "become",
+    "simple": "became",
+    "participle": "become",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "convertirse"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "verb": "begin",
+    "simple": "began",
+    "participle": "begun",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "comenzar"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "verb": "bet",
+    "simple": "bet/betted",
+    "participle": "bet/betted",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "apostar"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "verb": "bite",
+    "simple": "bit",
+    "participle": "bitten",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "morder"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "verb": "bleed",
+    "simple": "bled",
+    "participle": "bled",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "sangrar"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "verb": "blow",
+    "simple": "blew",
+    "participle": "blown",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "soplar"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "verb": "break",
+    "simple": "broke",
+    "participle": "broken",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "romper"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "verb": "bring",
+    "simple": "brought",
+    "participle": "brought",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "traer"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "verb": "build",
+    "simple": "built",
+    "participle": "built",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "construir"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "verb": "buy",
+    "simple": "bought",
+    "participle": "bought",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "comprar"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "verb": "catch",
+    "simple": "caught",
+    "participle": "caught",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "atrapar"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "verb": "choose",
+    "simple": "chose",
+    "participle": "chosen",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "elegir"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "verb": "come",
+    "simple": "came",
+    "participle": "come",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "venir"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "verb": "cost",
+    "simple": "cost",
+    "participle": "cost",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "costar"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "verb": "creep",
+    "simple": "crept",
+    "participle": "crept",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "arrastrarse"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "verb": "cut",
+    "simple": "cut",
+    "participle": "cut",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "cortar"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "verb": "deal",
+    "simple": "dealt",
+    "participle": "dealt",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "dar, repartir"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "verb": "do",
+    "simple": "did",
+    "participle": "done",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "hacer"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "verb": "draw",
+    "simple": "drew",
+    "participle": "drawn",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "dibujar"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "verb": "dream",
+    "simple": "dreamt/dreamed",
+    "participle": "dreamt/dreamed",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "soñar"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "verb": "drink",
+    "simple": "drank",
+    "participle": "drunk",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "beber"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "verb": "drive",
+    "simple": "drove",
+    "participle": "driven",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "conducir"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "verb": "eat",
+    "simple": "ate",
+    "participle": "eaten",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "comer"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "verb": "fall",
+    "simple": "fell",
+    "participle": "fallen",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "caer"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "verb": "feed",
+    "simple": "fed",
+    "participle": "fed",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "alimentar"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "verb": "feel",
+    "simple": "felt",
+    "participle": "felt",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "sentir"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "verb": "fight",
+    "simple": "fought",
+    "participle": "fought",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "pelear"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "verb": "find",
+    "simple": "found",
+    "participle": "found",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "encontrar"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "verb": "flee",
+    "simple": "fled",
+    "participle": "fled",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "huir"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "verb": "fly",
+    "simple": "flew",
+    "participle": "flown",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "volar"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "verb": "forget",
+    "simple": "forgot",
+    "participle": "forgotten",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "olvidar"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "verb": "forgive",
+    "simple": "forgave",
+    "participle": "forgiven",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "perdonar"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "verb": "forsake",
+    "simple": "forsook",
+    "participle": "forsaken",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "abandonar"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "verb": "freeze",
+    "simple": "froze",
+    "participle": "frozen",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "congelar"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "verb": "get",
+    "simple": "got",
+    "participle": "got",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "tener, obtener"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "verb": "give",
+    "simple": "gave",
+    "participle": "given",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "dar"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "verb": "go",
+    "simple": "went",
+    "participle": "gone",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "ir"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "verb": "grind",
+    "simple": "ground",
+    "participle": "ground",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "moler"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "verb": "grow",
+    "simple": "grew",
+    "participle": "grown",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "crecer"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "verb": "hang",
+    "simple": "hung",
+    "participle": "hung",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "colgar"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "verb": "have",
+    "simple": "had",
+    "participle": "had",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "tener"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "verb": "hear",
+    "simple": "heard",
+    "participle": "heard",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "oír"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "verb": "hide",
+    "simple": "hid",
+    "participle": "hidden",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "esconderse"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "verb": "hit",
+    "simple": "hit",
+    "participle": "hit",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "golpear"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "verb": "hold",
+    "simple": "held",
+    "participle": "held",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "tener, mantener"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "verb": "hurt",
+    "simple": "hurt",
+    "participle": "hurt",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "herir, doler"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "verb": "keep",
+    "simple": "kept",
+    "participle": "kept",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "guardar"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "verb": "kneel",
+    "simple": "knelt",
+    "participle": "knelt",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "arrodillarse"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "verb": "know",
+    "simple": "knew",
+    "participle": "known",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "saber"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "verb": "lead",
+    "simple": "led",
+    "participle": "led",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "encabezar"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "verb": "learn",
+    "simple": "learnt/learned",
+    "participle": "learnt/learned",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "aprender"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "verb": "leave",
+    "simple": "left",
+    "participle": "left",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "dejar"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "verb": "lend",
+    "simple": "lent",
+    "participle": "lent",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "prestar"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "verb": "let",
+    "simple": "let",
+    "participle": "let",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "dejar"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "verb": "lie",
+    "simple": "lay",
+    "participle": "lain",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "yacer"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "verb": "lose",
+    "simple": "lost",
+    "participle": "lost",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "perder"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "verb": "make",
+    "simple": "made",
+    "participle": "made",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "hacer"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "verb": "mean",
+    "simple": "meant",
+    "participle": "meant",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "significar"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "verb": "meet",
+    "simple": "met",
+    "participle": "met",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "conocer, encontrar"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "verb": "pay",
+    "simple": "paid",
+    "participle": "paid",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "pagar"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "verb": "put",
+    "simple": "put",
+    "participle": "put",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "poner"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "verb": "quit",
+    "simple": "quit/quitted",
+    "participle": "quit/quitted",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "abandonar"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "verb": "read",
+    "simple": "read",
+    "participle": "read",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "leer"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "verb": "ride",
+    "simple": "rode",
+    "participle": "ridden",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "montar, ir"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "verb": "ring",
+    "simple": "rang",
+    "participle": "rung",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "llamar por teléfono"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "verb": "rise",
+    "simple": "rose",
+    "participle": "risen",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "elevar"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "verb": "run",
+    "simple": "ran",
+    "participle": "run",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "correr"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "verb": "say",
+    "simple": "said",
+    "participle": "said",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "decir"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "verb": "see",
+    "simple": "saw",
+    "participle": "seen",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "ver"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "verb": "sell",
+    "simple": "sold",
+    "participle": "sold",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "vender"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "verb": "send",
+    "simple": "sent",
+    "participle": "sent",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "enviar"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "verb": "set",
+    "simple": "set",
+    "participle": "set",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "fijar"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "verb": "sew",
+    "simple": "sewed",
+    "participle": "sewn/sewed",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "coser"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "verb": "shake",
+    "simple": "shook",
+    "participle": "shaken",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "sacudir"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "verb": "shine",
+    "simple": "shone",
+    "participle": "shone",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "brillar"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "verb": "shoot",
+    "simple": "shot",
+    "participle": "shot",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "disparar"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "verb": "show",
+    "simple": "showed",
+    "participle": "shown/showed",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "mostrar"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "verb": "shrink",
+    "simple": "shrank/shrunk",
+    "participle": "shrunk",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "encoger"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "verb": "shut",
+    "simple": "shut",
+    "participle": "shut",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "cerrar"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "verb": "sing",
+    "simple": "sang",
+    "participle": "sung",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "cantar"
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "verb": "sink",
+    "simple": "sank",
+    "participle": "sunk",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "hundir"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "verb": "sit",
+    "simple": "sat",
+    "participle": "sat",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "sentarse"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "verb": "sleep",
+    "simple": "slept",
+    "participle": "slept",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "dormir"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "verb": "slide",
+    "simple": "slid",
+    "participle": "slid",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "deslizar"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "verb": "sow",
+    "simple": "sowed",
+    "participle": "sown/sowed",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "sembrar"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "verb": "speak",
+    "simple": "spoke",
+    "participle": "spoken",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "hablar"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "verb": "spell",
+    "simple": "spelt/spelled",
+    "participle": "spelt/spelled",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "deletrear"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "verb": "spend",
+    "simple": "spent",
+    "participle": "spent",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "gastar"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "verb": "spill",
+    "simple": "spilt/spilled",
+    "participle": "spilt/spilled",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "derramar"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "verb": "split",
+    "simple": "split",
+    "participle": "split",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "partir"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "verb": "spoil",
+    "simple": "spoilt/spoiled",
+    "participle": "spoilt/spoiled",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "estropear"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "verb": "spread",
+    "simple": "spread",
+    "participle": "spread",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "extenderse"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "verb": "stand",
+    "simple": "stood",
+    "participle": "stood",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "estar de pie"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "verb": "steal",
+    "simple": "stole",
+    "participle": "stolen",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "robar"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "verb": "sting",
+    "simple": "stung",
+    "participle": "stung",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "picar"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "verb": "stink",
+    "simple": "stank/stunk",
+    "participle": "stunk",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "apestar"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "verb": "strike",
+    "simple": "struck",
+    "participle": "struck",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "golpear"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "verb": "swear",
+    "simple": "swore",
+    "participle": "sworn",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "jurar"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "verb": "sweep",
+    "simple": "swept",
+    "participle": "swept",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "barrer"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "verb": "swim",
+    "simple": "swam",
+    "participle": "swum",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "nadar"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "verb": "take",
+    "simple": "took",
+    "participle": "taken",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "tomar"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "verb": "teach",
+    "simple": "taught",
+    "participle": "taught",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "enseñar"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "verb": "tear",
+    "simple": "tore",
+    "participle": "torn",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "romper"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "verb": "tell",
+    "simple": "told",
+    "participle": "told",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "decir"
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "verb": "think",
+    "simple": "thought",
+    "participle": "thought",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "pensar"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "verb": "throw",
+    "simple": "threw",
+    "participle": "thrown",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "lanzar"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "verb": "tread",
+    "simple": "trode",
+    "participle": "trodden/trod",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "pisar"
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "verb": "understand",
+    "simple": "understood",
+    "participle": "understood",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "entender"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "verb": "wake",
+    "simple": "woke",
+    "participle": "woken",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "despertarse"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "verb": "wear",
+    "simple": "wore",
+    "participle": "worn",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "llevar puesto"
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "verb": "weave",
+    "simple": "wove",
+    "participle": "woven",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "tejer"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "verb": "weep",
+    "simple": "wept",
+    "participle": "wept",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "llorar"
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "verb": "win",
+    "simple": "won",
+    "participle": "won",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "ganar"
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "verb": "wring",
+    "simple": "wrung",
+    "participle": "wrung",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "retorcer"
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "verb": "write",
+    "simple": "wrote",
+    "participle": "written",
+    "matched": false,
+    "translations": [
+      {
+        "id": 1,
+        "language": "spanish",
+        "value": "escribir"
+      }
+    ]
+  }
+]

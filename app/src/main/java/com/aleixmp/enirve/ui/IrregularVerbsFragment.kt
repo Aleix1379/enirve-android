@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.RadioButton
 import android.widget.TextView
 import com.aleixmp.enirve.R
+import com.aleixmp.numberpicker.NumberPicker
 import info.hoang8f.android.segmented.SegmentedGroup
 
 private const val timeOption = "Select the minutes"
@@ -27,16 +28,13 @@ class IrregularVerbsFragment : Fragment(), View.OnClickListener {
     private var mSegmentedGroup: SegmentedGroup? = null
     private var mTxtDurationTypeDescription: TextView? = null
     private var mTxtOptionDescription: TextView? = null
-    private var mTxtOptionValue: TextView? = null
-    private var mBtnOptionMinus: Button? = null
-    private var mBtnOptionAdd: Button? = null
+    private var npOptionValue: NumberPicker? = null
     private var mBtnNextHome: Button? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        activity?.title = resources.getString(R.string.app_title)
         timeDescription = resources.getString(R.string.time_description)
         repetitionsDescription = resources.getString(R.string.repetitions_description)
 
@@ -48,9 +46,7 @@ class IrregularVerbsFragment : Fragment(), View.OnClickListener {
         mSegmentedGroup = view.findViewById(R.id.sg_duration_type)
         mTxtDurationTypeDescription = view.findViewById(R.id.text_duration_type_description) as TextView
         mTxtOptionDescription = view.findViewById(R.id.text_option_description) as TextView
-        mTxtOptionValue = view.findViewById(R.id.text_option_value) as TextView
-        mBtnOptionMinus = view.findViewById(R.id.button_option_value_minus) as Button
-        mBtnOptionAdd = view.findViewById(R.id.button_option_value_add) as Button
+        npOptionValue = view.findViewById(R.id.np_option_value_container) as NumberPicker
         mBtnNextHome = view.findViewById(R.id.button_next_home) as Button
 
         setDescriptionDurationType(timeDescription ,timeOption)
@@ -66,8 +62,6 @@ class IrregularVerbsFragment : Fragment(), View.OnClickListener {
 
         }
 
-        mBtnOptionMinus?.setOnClickListener(this)
-        mBtnOptionAdd?.setOnClickListener(this)
         mBtnNextHome?.setOnClickListener(this)
 
         return view
@@ -81,17 +75,8 @@ class IrregularVerbsFragment : Fragment(), View.OnClickListener {
 
                 val intent = Intent(context, SelectionVerbsActivity::class.java)
                 intent.putExtra(SelectionVerbsActivity.DURATION_TYPE, button.tag.toString())
-                intent.putExtra(SelectionVerbsActivity.DURATION_VALUE, mTxtOptionValue!!.text)
+                intent.putExtra(SelectionVerbsActivity.DURATION_VALUE, npOptionValue!!.getValue())
                 startActivity(intent)
-            } else {
-                var value: Int = mTxtOptionValue!!.text.toString().toInt()
-
-                if (it.tag == "minus" && value > 1) {
-                    value--
-                } else if (it.tag == "add") {
-                    value++
-                }
-                mTxtOptionValue!!.text = value.toString()
             }
         }
     }

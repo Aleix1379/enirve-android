@@ -26,8 +26,13 @@
     <string name="mode_choose_verbs_by_level">By level</string>
     <string name="mode_choose_verbs_all">All</string>
     <string name="mode_choose_verbs_manual_description">Manually choose the verbs that you want to practice</string>
-    <string name="mode_choose_verbs_random_description">The verbs are selected random, you just need to enter the number of verbs to practise</string>
+    <string name="mode_choose_verbs_random_description">The verbs are selected random, you just need to enter the number
+        of verbs to practise
+    </string>
     <string name="mode_choose_verbs_all_description">You will practise with all verbs of the app</string>
     <string name="mode_choose_verbs_by_level_description">You will can choose the verbs by level of difficulty</string>
+    <string name="mode_choose_verbs_next">Start</string>
+    <string name="choose_random">Choose Random</string>
+    <string name="choose_all">Choose all</string>
 
 </resources>

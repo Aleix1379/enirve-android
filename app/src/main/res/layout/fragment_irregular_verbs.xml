@@ -72,58 +72,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="32dp"
-                app:layout_constraintBottom_toTopOf="@+id/rl_option_value_container"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/np_option_value_container"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:textStyle="bold"
                 android:fontFamily="@font/lato" android:textColor="@color/secondaryTextColor" android:textSize="20sp"/>
 
-
-        <RelativeLayout android:id="@+id/rl_option_value_container"
-                        android:layout_width="match_parent" android:layout_height="50dp"
-                        android:layout_marginBottom="32dp"
-                        app:layout_constraintBottom_toTopOf="@id/button_next_home"
-                        android:background="@drawable/rectangle" tools:layout_editor_absoluteX="32dp">
-
-
-            <Button
-                    android:id="@+id/button_option_value_minus"
-                    android:text="@string/minus"
-                    android:layout_width="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:textColor="@color/secondaryDarkColor"
-                    android:textSize="30sp"
-                    android:height="50dp"
-                    android:width="50dp"
-                    android:layout_height="wrap_content" android:layout_marginStart="0dp"
-                    android:tag="minus"/>
-            <TextView
-                    android:id="@+id/text_option_value"
-                    android:text="@string/default_value_option"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:width="50dp"
-                    android:textAlignment="center"
-                    android:gravity="center_vertical"
-                    android:textColor="@color/darkColor"
-                    android:layout_toStartOf="@+id/button_option_value_add" android:layout_marginEnd="0dp"
-                    android:layout_toEndOf="@+id/button_option_value_minus" android:layout_marginStart="0dp"
-                    android:layout_alignParentBottom="true" android:layout_marginBottom="0dp"
-                    android:layout_marginTop="0dp" android:layout_alignParentTop="true"/>
-            <Button
-                    android:id="@+id/button_option_value_add"
-                    android:text="@string/add"
-                    android:layout_width="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:textColor="@color/secondaryDarkColor"
-                    android:textSize="30sp"
-                    android:height="50dp"
-                    android:width="50dp"
-                    android:layout_height="wrap_content" android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="0dp" android:tag="add"/>
-
-
-        </RelativeLayout>
+        <com.aleixmp.numberpicker.NumberPicker
+                android:id="@+id/np_option_value_container"
+                app:text_color="@color/secondaryColor"
+                app:min_value="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/button_next_home"
+                android:layout_marginBottom="32dp"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+        />
 
         <Button
                 android:id="@+id/button_next_home"
@@ -132,11 +99,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="32dp"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:background="@color/secondaryColor"
-                android:textColor="@android:color/white" android:fontFamily="@font/lato"
-                android:textSize="17sp" android:textStyle="bold"/>
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/lato"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
 
     </android.support.constraint.ConstraintLayout>
 
