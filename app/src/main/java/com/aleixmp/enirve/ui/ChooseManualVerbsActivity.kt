@@ -27,6 +27,7 @@ class ChooseManualVerbsActivity : AppCompatActivity(), TextWatcher {
     private lateinit var mBtnManualVerbsDeSelectAll: Button
     private lateinit var mTxtTitle: TextView
     private var mVerbs: List<Verb> = ArrayList()
+    private var mOriginalVerbsSelected: List<Verb> = ArrayList()
     private lateinit var mAdapter: VerbsAdapter
     private lateinit var mExtSearchVerbs: EditText
     private val mVerbRepo = VerbRepo(this)
@@ -56,6 +57,7 @@ class ChooseManualVerbsActivity : AppCompatActivity(), TextWatcher {
         val gson = gsonBuilder.create()
 
         val paramVerbs = ArrayList(gson.fromJson(json, Array<Verb>::class.java).toList())
+        val mOriginalVerbsSelected = ArrayList(gson.fromJson(json, Array<Verb>::class.java).toList())
 
         setMatchVerbsSelected(mVerbs, paramVerbs)
 
@@ -70,19 +72,17 @@ class ChooseManualVerbsActivity : AppCompatActivity(), TextWatcher {
         }
 
         mBtnManualVerbsCancel.setOnClickListener {
-            //            mVerbs.forEach { it.matched = false }
-//            adapter.notifyDataSetChanged()
-//            updateTitle()
-
+            val resultIntent = Intent()
+            val gson = Gson()
+            resultIntent.putExtra(INPUT_NAME, gson.toJson(mOriginalVerbsSelected))
+            setResult(Activity.RESULT_OK, resultIntent)
+            finish()
         }
 
         mBtnManualVerbsSave.setOnClickListener {
             val resultIntent = Intent()
             val gson = Gson()
             resultIntent.putExtra(INPUT_NAME, gson.toJson(mAdapter.getVerbsSelected()))
-
-
-
             setResult(Activity.RESULT_OK, resultIntent)
             finish()
         }
