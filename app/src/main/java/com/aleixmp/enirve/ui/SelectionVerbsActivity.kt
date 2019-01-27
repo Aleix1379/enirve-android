@@ -1,23 +1,32 @@
 package com.aleixmp.enirve.ui
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentTransaction
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import com.aleixmp.enirve.R
 import info.hoang8f.android.segmented.SegmentedGroup
+import model.Verb
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+
 
 class SelectionVerbsActivity : AppCompatActivity(),
     RadioGroup.OnCheckedChangeListener,
     ChooseVerbsAllFragment.OnFragmentInteractionListener,
-    ChooseVerbsRandomFragment.OnFragmentInteractionListener {
+    ChooseVerbsRandomFragment.OnFragmentInteractionListener,
+    ChooseVerbsManualFragment.OnFragmentInteractionListener,
+    ChooseVerbsByLevelFragment.OnFragmentInteractionListener {
 
     override fun onFragmentInteraction(uri: Uri) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        TODO("not implemented")
+        Log.d(mTAG, "Uri: $uri")
     }
 
 //    enum class ModeChooseVerbs {
@@ -82,8 +91,14 @@ class SelectionVerbsActivity : AppCompatActivity(),
                 setDescriptionChooseMode(resources.getString(R.string.mode_choose_verbs_random_description))
                 setFragmentChooseMode(ChooseVerbsRandomFragment.newInstance())
             }
-            radioManual.id -> setDescriptionChooseMode(resources.getString(R.string.mode_choose_verbs_manual_description))
-            radioByLevel.id -> setDescriptionChooseMode(resources.getString(R.string.mode_choose_verbs_by_level_description))
+            radioManual.id -> {
+                setDescriptionChooseMode(resources.getString(R.string.mode_choose_verbs_manual_description))
+                setFragmentChooseMode(ChooseVerbsManualFragment.newInstance())
+            }
+            radioByLevel.id -> {
+                setDescriptionChooseMode(resources.getString(R.string.mode_choose_verbs_by_level_description))
+                setFragmentChooseMode(ChooseVerbsByLevelFragment.newInstance())
+            }
         }
     }
 

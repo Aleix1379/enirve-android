@@ -19,8 +19,11 @@
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp"
-                android:fontFamily="@font/lato" android:textSize="20sp" android:textColor="@color/secondaryTextColor"
-                android:textStyle="bold"/>
+                android:fontFamily="@font/lato"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/secondaryTextColor"
+        />
 
         <info.hoang8f.android.segmented.SegmentedGroup
                 xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
@@ -76,7 +79,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:textStyle="bold"
-                android:fontFamily="@font/lato" android:textColor="@color/secondaryTextColor" android:textSize="20sp"/>
+                android:fontFamily="@font/lato"
+                android:textSize="20sp"
+                android:textColor="@color/secondaryTextColor" />
 
         <com.aleixmp.numberpicker.NumberPicker
                 android:id="@+id/np_option_value_container"
@@ -102,7 +107,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:background="@color/secondaryColor"
+                android:background="@drawable/button"
                 android:textColor="@android:color/white"
                 android:fontFamily="@font/lato"
                 android:textSize="17sp"

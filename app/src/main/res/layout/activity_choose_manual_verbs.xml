@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.ChooseManualVerbsActivity">
+
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@color/primaryColor"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                    android:id="@+id/manual_verbs_button_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="0dp"
+            >
+
+                <Button
+                        android:id="@+id/button_manual_verbs_cancel"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/manual_verbs_cancel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        style="@style/ManualVerbsButton"
+                />
+
+                <TextView android:id="@+id/text_manual_choose_your_verbs"
+                          android:layout_width="wrap_content" android:layout_height="match_parent"
+                          android:text="@string/manual_choose_your_verbs"
+                          app:layout_constraintEnd_toStartOf="@+id/button_manual_verbs_save" android:layout_marginEnd="8dp"
+                          app:layout_constraintStart_toEndOf="@+id/button_manual_verbs_cancel" android:layout_marginStart="8dp"
+                          app:layout_constraintBottom_toBottomOf="parent"
+                          app:layout_constraintTop_toTopOf="parent"
+                          android:textColor="@color/md_white_1000"
+                          android:fontFamily="@font/lato"
+                          android:textSize="20sp"
+                          android:textStyle="bold"
+                          android:gravity="center"
+                          android:layout_marginTop="8dp" android:layout_marginBottom="12dp"/>
+
+                <Button
+                        android:id="@+id/button_manual_verbs_save"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/manual_verbs_save"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        style="@style/ManualVerbsButton"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                    android:id="@+id/manual_verbs_search_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/manual_verbs_height_search"
+            >
+
+                <ImageButton
+                        android:id="@+id/image_button_magnify_search_verbs"
+                        android:layout_width="@dimen/manual_verbs_height_search"
+                        android:layout_height="@dimen/manual_verbs_height_search"
+                        android:contentDescription="@string/magnify"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/magnify"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="0dp"
+                        app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="0dp"
+                />
+
+                <EditText
+                        android:id="@+id/text_search_verbs"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lato"
+                        android:inputType="textFilter"
+                        android:hint="@string/search_verbs_placeholder"
+                        android:textSize="20sp"
+                        android:gravity="center|start"
+                        android:textColor="@color/md_white_1000"
+                        android:textColorHint="@color/md_grey_500"
+                        app:layout_constraintStart_toEndOf="@id/image_button_magnify_search_verbs"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:backgroundTint="@color/secondaryLightColor" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <GridView
+            android:id="@+id/grid_view_manual_verbs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:columnWidth="120dp"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="20dp"
+            android:stretchMode="spacingWidthUniform"
+            android:layout_marginBottom="8dp"
+            android:textAlignment="center"
+
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar"/>
+
+    <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                                                 android:layout_height="50dp"
+                                                 app:layout_constraintBottom_toBottomOf="parent"
+                                                 android:background="@color/md_grey_100"
+                                                 android:id="@+id/constraintLayout">
+
+        <Button
+                android:id="@+id/button_verbs_deselect_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/manula_verbs_deselect_all"
+                android:textColor="@color/whiteColor"
+                android:width="140dp"
+                android:background="@drawable/button"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                android:layout_marginBottom="0dp" app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+                android:id="@+id/button_verbs_select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whiteColor"
+                android:width="140dp"
+                android:background="@drawable/button"
+                android:text="@string/manula_verbs_select_all"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginBottom="0dp" app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!--<include layout="@layout/content_choose_manual_verbs" />-->
+
+</android.support.constraint.ConstraintLayout>

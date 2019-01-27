@@ -9,6 +9,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
+                android:name=".ui.ChooseManualVerbsActivity"
+                android:label="@string/title_activity_choose_manual_verbs"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+        </activity>
+        <activity
                 android:name=".ui.SelectionVerbsActivity"
                 android:label="@string/app_title"
                 android:screenOrientation="portrait">

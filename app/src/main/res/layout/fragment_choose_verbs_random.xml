@@ -12,6 +12,7 @@
         <com.aleixmp.numberpicker.NumberPicker
                 android:id="@+id/np_random_value_container"
                 app:min_value="1"
+                app:max_value="118"
                 app:text_color="@color/secondaryColor"
                 android:layout_width="230dp"
                 android:layout_height="60dp"

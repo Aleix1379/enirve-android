@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "verb": "arise",
+    "present": "arise",
     "simple": "arose",
     "participle": "arisen",
     "matched": false,
@@ -15,7 +15,7 @@
   },
   {
     "id": 2,
-    "verb": "be",
+    "present": "be",
     "simple": "was / were",
     "participle": "been",
     "matched": false,
@@ -29,7 +29,7 @@
   },
   {
     "id": 3,
-    "verb": "beat",
+    "present": "beat",
     "simple": "beat",
     "participle": "beaten",
     "matched": false,
@@ -43,7 +43,7 @@
   },
   {
     "id": 4,
-    "verb": "become",
+    "present": "become",
     "simple": "became",
     "participle": "become",
     "matched": false,
@@ -57,7 +57,7 @@
   },
   {
     "id": 5,
-    "verb": "begin",
+    "present": "begin",
     "simple": "began",
     "participle": "begun",
     "matched": false,
@@ -71,7 +71,7 @@
   },
   {
     "id": 6,
-    "verb": "bet",
+    "present": "bet",
     "simple": "bet/betted",
     "participle": "bet/betted",
     "matched": false,
@@ -85,7 +85,7 @@
   },
   {
     "id": 7,
-    "verb": "bite",
+    "present": "bite",
     "simple": "bit",
     "participle": "bitten",
     "matched": false,
@@ -99,7 +99,7 @@
   },
   {
     "id": 8,
-    "verb": "bleed",
+    "present": "bleed",
     "simple": "bled",
     "participle": "bled",
     "matched": false,
@@ -113,7 +113,7 @@
   },
   {
     "id": 9,
-    "verb": "blow",
+    "present": "blow",
     "simple": "blew",
     "participle": "blown",
     "matched": false,
@@ -127,7 +127,7 @@
   },
   {
     "id": 10,
-    "verb": "break",
+    "present": "break",
     "simple": "broke",
     "participle": "broken",
     "matched": false,
@@ -141,7 +141,7 @@
   },
   {
     "id": 11,
-    "verb": "bring",
+    "present": "bring",
     "simple": "brought",
     "participle": "brought",
     "matched": false,
@@ -155,7 +155,7 @@
   },
   {
     "id": 12,
-    "verb": "build",
+    "present": "build",
     "simple": "built",
     "participle": "built",
     "matched": false,
@@ -169,7 +169,7 @@
   },
   {
     "id": 13,
-    "verb": "buy",
+    "present": "buy",
     "simple": "bought",
     "participle": "bought",
     "matched": false,
@@ -183,7 +183,7 @@
   },
   {
     "id": 14,
-    "verb": "catch",
+    "present": "catch",
     "simple": "caught",
     "participle": "caught",
     "matched": false,
@@ -197,7 +197,7 @@
   },
   {
     "id": 15,
-    "verb": "choose",
+    "present": "choose",
     "simple": "chose",
     "participle": "chosen",
     "matched": false,
@@ -211,7 +211,7 @@
   },
   {
     "id": 16,
-    "verb": "come",
+    "present": "come",
     "simple": "came",
     "participle": "come",
     "matched": false,
@@ -225,7 +225,7 @@
   },
   {
     "id": 17,
-    "verb": "cost",
+    "present": "cost",
     "simple": "cost",
     "participle": "cost",
     "matched": false,
@@ -239,7 +239,7 @@
   },
   {
     "id": 18,
-    "verb": "creep",
+    "present": "creep",
     "simple": "crept",
     "participle": "crept",
     "matched": false,
@@ -253,7 +253,7 @@
   },
   {
     "id": 19,
-    "verb": "cut",
+    "present": "cut",
     "simple": "cut",
     "participle": "cut",
     "matched": false,
@@ -267,7 +267,7 @@
   },
   {
     "id": 20,
-    "verb": "deal",
+    "present": "deal",
     "simple": "dealt",
     "participle": "dealt",
     "matched": false,
@@ -281,7 +281,7 @@
   },
   {
     "id": 21,
-    "verb": "do",
+    "present": "do",
     "simple": "did",
     "participle": "done",
     "matched": false,
@@ -295,7 +295,7 @@
   },
   {
     "id": 22,
-    "verb": "draw",
+    "present": "draw",
     "simple": "drew",
     "participle": "drawn",
     "matched": false,
@@ -309,7 +309,7 @@
   },
   {
     "id": 23,
-    "verb": "dream",
+    "present": "dream",
     "simple": "dreamt/dreamed",
     "participle": "dreamt/dreamed",
     "matched": false,
@@ -323,7 +323,7 @@
   },
   {
     "id": 24,
-    "verb": "drink",
+    "present": "drink",
     "simple": "drank",
     "participle": "drunk",
     "matched": false,
@@ -337,7 +337,7 @@
   },
   {
     "id": 25,
-    "verb": "drive",
+    "present": "drive",
     "simple": "drove",
     "participle": "driven",
     "matched": false,
@@ -351,7 +351,7 @@
   },
   {
     "id": 26,
-    "verb": "eat",
+    "present": "eat",
     "simple": "ate",
     "participle": "eaten",
     "matched": false,
@@ -365,7 +365,7 @@
   },
   {
     "id": 27,
-    "verb": "fall",
+    "present": "fall",
     "simple": "fell",
     "participle": "fallen",
     "matched": false,
@@ -379,7 +379,7 @@
   },
   {
     "id": 28,
-    "verb": "feed",
+    "present": "feed",
     "simple": "fed",
     "participle": "fed",
     "matched": false,
@@ -393,7 +393,7 @@
   },
   {
     "id": 29,
-    "verb": "feel",
+    "present": "feel",
     "simple": "felt",
     "participle": "felt",
     "matched": false,
@@ -407,7 +407,7 @@
   },
   {
     "id": 30,
-    "verb": "fight",
+    "present": "fight",
     "simple": "fought",
     "participle": "fought",
     "matched": false,
@@ -421,7 +421,7 @@
   },
   {
     "id": 31,
-    "verb": "find",
+    "present": "find",
     "simple": "found",
     "participle": "found",
     "matched": false,
@@ -435,7 +435,7 @@
   },
   {
     "id": 32,
-    "verb": "flee",
+    "present": "flee",
     "simple": "fled",
     "participle": "fled",
     "matched": false,
@@ -449,7 +449,7 @@
   },
   {
     "id": 33,
-    "verb": "fly",
+    "present": "fly",
     "simple": "flew",
     "participle": "flown",
     "matched": false,
@@ -463,7 +463,7 @@
   },
   {
     "id": 34,
-    "verb": "forget",
+    "present": "forget",
     "simple": "forgot",
     "participle": "forgotten",
     "matched": false,
@@ -477,7 +477,7 @@
   },
   {
     "id": 35,
-    "verb": "forgive",
+    "present": "forgive",
     "simple": "forgave",
     "participle": "forgiven",
     "matched": false,
@@ -491,7 +491,7 @@
   },
   {
     "id": 36,
-    "verb": "forsake",
+    "present": "forsake",
     "simple": "forsook",
     "participle": "forsaken",
     "matched": false,
@@ -505,7 +505,7 @@
   },
   {
     "id": 37,
-    "verb": "freeze",
+    "present": "freeze",
     "simple": "froze",
     "participle": "frozen",
     "matched": false,
@@ -519,7 +519,7 @@
   },
   {
     "id": 38,
-    "verb": "get",
+    "present": "get",
     "simple": "got",
     "participle": "got",
     "matched": false,
@@ -533,7 +533,7 @@
   },
   {
     "id": 39,
-    "verb": "give",
+    "present": "give",
     "simple": "gave",
     "participle": "given",
     "matched": false,
@@ -547,7 +547,7 @@
   },
   {
     "id": 40,
-    "verb": "go",
+    "present": "go",
     "simple": "went",
     "participle": "gone",
     "matched": false,
@@ -561,7 +561,7 @@
   },
   {
     "id": 41,
-    "verb": "grind",
+    "present": "grind",
     "simple": "ground",
     "participle": "ground",
     "matched": false,
@@ -575,7 +575,7 @@
   },
   {
     "id": 42,
-    "verb": "grow",
+    "present": "grow",
     "simple": "grew",
     "participle": "grown",
     "matched": false,
@@ -589,7 +589,7 @@
   },
   {
     "id": 43,
-    "verb": "hang",
+    "present": "hang",
     "simple": "hung",
     "participle": "hung",
     "matched": false,
@@ -603,7 +603,7 @@
   },
   {
     "id": 44,
-    "verb": "have",
+    "present": "have",
     "simple": "had",
     "participle": "had",
     "matched": false,
@@ -617,7 +617,7 @@
   },
   {
     "id": 45,
-    "verb": "hear",
+    "present": "hear",
     "simple": "heard",
     "participle": "heard",
     "matched": false,
@@ -631,7 +631,7 @@
   },
   {
     "id": 46,
-    "verb": "hide",
+    "present": "hide",
     "simple": "hid",
     "participle": "hidden",
     "matched": false,
@@ -645,7 +645,7 @@
   },
   {
     "id": 47,
-    "verb": "hit",
+    "present": "hit",
     "simple": "hit",
     "participle": "hit",
     "matched": false,
@@ -659,7 +659,7 @@
   },
   {
     "id": 48,
-    "verb": "hold",
+    "present": "hold",
     "simple": "held",
     "participle": "held",
     "matched": false,
@@ -673,7 +673,7 @@
   },
   {
     "id": 49,
-    "verb": "hurt",
+    "present": "hurt",
     "simple": "hurt",
     "participle": "hurt",
     "matched": false,
@@ -687,7 +687,7 @@
   },
   {
     "id": 50,
-    "verb": "keep",
+    "present": "keep",
     "simple": "kept",
     "participle": "kept",
     "matched": false,
@@ -701,7 +701,7 @@
   },
   {
     "id": 51,
-    "verb": "kneel",
+    "present": "kneel",
     "simple": "knelt",
     "participle": "knelt",
     "matched": false,
@@ -715,7 +715,7 @@
   },
   {
     "id": 52,
-    "verb": "know",
+    "present": "know",
     "simple": "knew",
     "participle": "known",
     "matched": false,
@@ -729,7 +729,7 @@
   },
   {
     "id": 53,
-    "verb": "lead",
+    "present": "lead",
     "simple": "led",
     "participle": "led",
     "matched": false,
@@ -743,7 +743,7 @@
   },
   {
     "id": 54,
-    "verb": "learn",
+    "present": "learn",
     "simple": "learnt/learned",
     "participle": "learnt/learned",
     "matched": false,
@@ -757,7 +757,7 @@
   },
   {
     "id": 55,
-    "verb": "leave",
+    "present": "leave",
     "simple": "left",
     "participle": "left",
     "matched": false,
@@ -771,7 +771,7 @@
   },
   {
     "id": 56,
-    "verb": "lend",
+    "present": "lend",
     "simple": "lent",
     "participle": "lent",
     "matched": false,
@@ -785,7 +785,7 @@
   },
   {
     "id": 57,
-    "verb": "let",
+    "present": "let",
     "simple": "let",
     "participle": "let",
     "matched": false,
@@ -799,7 +799,7 @@
   },
   {
     "id": 58,
-    "verb": "lie",
+    "present": "lie",
     "simple": "lay",
     "participle": "lain",
     "matched": false,
@@ -813,7 +813,7 @@
   },
   {
     "id": 59,
-    "verb": "lose",
+    "present": "lose",
     "simple": "lost",
     "participle": "lost",
     "matched": false,
@@ -827,7 +827,7 @@
   },
   {
     "id": 60,
-    "verb": "make",
+    "present": "make",
     "simple": "made",
     "participle": "made",
     "matched": false,
@@ -841,7 +841,7 @@
   },
   {
     "id": 61,
-    "verb": "mean",
+    "present": "mean",
     "simple": "meant",
     "participle": "meant",
     "matched": false,
@@ -855,7 +855,7 @@
   },
   {
     "id": 62,
-    "verb": "meet",
+    "present": "meet",
     "simple": "met",
     "participle": "met",
     "matched": false,
@@ -869,7 +869,7 @@
   },
   {
     "id": 63,
-    "verb": "pay",
+    "present": "pay",
     "simple": "paid",
     "participle": "paid",
     "matched": false,
@@ -883,7 +883,7 @@
   },
   {
     "id": 64,
-    "verb": "put",
+    "present": "put",
     "simple": "put",
     "participle": "put",
     "matched": false,
@@ -897,7 +897,7 @@
   },
   {
     "id": 65,
-    "verb": "quit",
+    "present": "quit",
     "simple": "quit/quitted",
     "participle": "quit/quitted",
     "matched": false,
@@ -911,7 +911,7 @@
   },
   {
     "id": 66,
-    "verb": "read",
+    "present": "read",
     "simple": "read",
     "participle": "read",
     "matched": false,
@@ -925,7 +925,7 @@
   },
   {
     "id": 67,
-    "verb": "ride",
+    "present": "ride",
     "simple": "rode",
     "participle": "ridden",
     "matched": false,
@@ -939,7 +939,7 @@
   },
   {
     "id": 68,
-    "verb": "ring",
+    "present": "ring",
     "simple": "rang",
     "participle": "rung",
     "matched": false,
@@ -953,7 +953,7 @@
   },
   {
     "id": 69,
-    "verb": "rise",
+    "present": "rise",
     "simple": "rose",
     "participle": "risen",
     "matched": false,
@@ -967,7 +967,7 @@
   },
   {
     "id": 70,
-    "verb": "run",
+    "present": "run",
     "simple": "ran",
     "participle": "run",
     "matched": false,
@@ -981,7 +981,7 @@
   },
   {
     "id": 71,
-    "verb": "say",
+    "present": "say",
     "simple": "said",
     "participle": "said",
     "matched": false,
@@ -995,7 +995,7 @@
   },
   {
     "id": 72,
-    "verb": "see",
+    "present": "see",
     "simple": "saw",
     "participle": "seen",
     "matched": false,
@@ -1009,7 +1009,7 @@
   },
   {
     "id": 73,
-    "verb": "sell",
+    "present": "sell",
     "simple": "sold",
     "participle": "sold",
     "matched": false,
@@ -1023,7 +1023,7 @@
   },
   {
     "id": 74,
-    "verb": "send",
+    "present": "send",
     "simple": "sent",
     "participle": "sent",
     "matched": false,
@@ -1037,7 +1037,7 @@
   },
   {
     "id": 75,
-    "verb": "set",
+    "present": "set",
     "simple": "set",
     "participle": "set",
     "matched": false,
@@ -1051,7 +1051,7 @@
   },
   {
     "id": 76,
-    "verb": "sew",
+    "present": "sew",
     "simple": "sewed",
     "participle": "sewn/sewed",
     "matched": false,
@@ -1065,7 +1065,7 @@
   },
   {
     "id": 77,
-    "verb": "shake",
+    "present": "shake",
     "simple": "shook",
     "participle": "shaken",
     "matched": false,
@@ -1079,7 +1079,7 @@
   },
   {
     "id": 78,
-    "verb": "shine",
+    "present": "shine",
     "simple": "shone",
     "participle": "shone",
     "matched": false,
@@ -1093,7 +1093,7 @@
   },
   {
     "id": 79,
-    "verb": "shoot",
+    "present": "shoot",
     "simple": "shot",
     "participle": "shot",
     "matched": false,
@@ -1107,7 +1107,7 @@
   },
   {
     "id": 80,
-    "verb": "show",
+    "present": "show",
     "simple": "showed",
     "participle": "shown/showed",
     "matched": false,
@@ -1121,7 +1121,7 @@
   },
   {
     "id": 81,
-    "verb": "shrink",
+    "present": "shrink",
     "simple": "shrank/shrunk",
     "participle": "shrunk",
     "matched": false,
@@ -1135,7 +1135,7 @@
   },
   {
     "id": 82,
-    "verb": "shut",
+    "present": "shut",
     "simple": "shut",
     "participle": "shut",
     "matched": false,
@@ -1149,7 +1149,7 @@
   },
   {
     "id": 83,
-    "verb": "sing",
+    "present": "sing",
     "simple": "sang",
     "participle": "sung",
     "matched": false,
@@ -1163,7 +1163,7 @@
   },
   {
     "id": 84,
-    "verb": "sink",
+    "present": "sink",
     "simple": "sank",
     "participle": "sunk",
     "matched": false,
@@ -1177,7 +1177,7 @@
   },
   {
     "id": 85,
-    "verb": "sit",
+    "present": "sit",
     "simple": "sat",
     "participle": "sat",
     "matched": false,
@@ -1191,7 +1191,7 @@
   },
   {
     "id": 86,
-    "verb": "sleep",
+    "present": "sleep",
     "simple": "slept",
     "participle": "slept",
     "matched": false,
@@ -1205,7 +1205,7 @@
   },
   {
     "id": 87,
-    "verb": "slide",
+    "present": "slide",
     "simple": "slid",
     "participle": "slid",
     "matched": false,
@@ -1219,7 +1219,7 @@
   },
   {
     "id": 88,
-    "verb": "sow",
+    "present": "sow",
     "simple": "sowed",
     "participle": "sown/sowed",
     "matched": false,
@@ -1233,7 +1233,7 @@
   },
   {
     "id": 89,
-    "verb": "speak",
+    "present": "speak",
     "simple": "spoke",
     "participle": "spoken",
     "matched": false,
@@ -1247,7 +1247,7 @@
   },
   {
     "id": 90,
-    "verb": "spell",
+    "present": "spell",
     "simple": "spelt/spelled",
     "participle": "spelt/spelled",
     "matched": false,
@@ -1261,7 +1261,7 @@
   },
   {
     "id": 91,
-    "verb": "spend",
+    "present": "spend",
     "simple": "spent",
     "participle": "spent",
     "matched": false,
@@ -1275,7 +1275,7 @@
   },
   {
     "id": 92,
-    "verb": "spill",
+    "present": "spill",
     "simple": "spilt/spilled",
     "participle": "spilt/spilled",
     "matched": false,
@@ -1289,7 +1289,7 @@
   },
   {
     "id": 93,
-    "verb": "split",
+    "present": "split",
     "simple": "split",
     "participle": "split",
     "matched": false,
@@ -1303,7 +1303,7 @@
   },
   {
     "id": 94,
-    "verb": "spoil",
+    "present": "spoil",
     "simple": "spoilt/spoiled",
     "participle": "spoilt/spoiled",
     "matched": false,
@@ -1317,7 +1317,7 @@
   },
   {
     "id": 95,
-    "verb": "spread",
+    "present": "spread",
     "simple": "spread",
     "participle": "spread",
     "matched": false,
@@ -1331,7 +1331,7 @@
   },
   {
     "id": 96,
-    "verb": "stand",
+    "present": "stand",
     "simple": "stood",
     "participle": "stood",
     "matched": false,
@@ -1345,7 +1345,7 @@
   },
   {
     "id": 97,
-    "verb": "steal",
+    "present": "steal",
     "simple": "stole",
     "participle": "stolen",
     "matched": false,
@@ -1359,7 +1359,7 @@
   },
   {
     "id": 98,
-    "verb": "sting",
+    "present": "sting",
     "simple": "stung",
     "participle": "stung",
     "matched": false,
@@ -1373,7 +1373,7 @@
   },
   {
     "id": 99,
-    "verb": "stink",
+    "present": "stink",
     "simple": "stank/stunk",
     "participle": "stunk",
     "matched": false,
@@ -1387,7 +1387,7 @@
   },
   {
     "id": 100,
-    "verb": "strike",
+    "present": "strike",
     "simple": "struck",
     "participle": "struck",
     "matched": false,
@@ -1401,7 +1401,7 @@
   },
   {
     "id": 101,
-    "verb": "swear",
+    "present": "swear",
     "simple": "swore",
     "participle": "sworn",
     "matched": false,
@@ -1415,7 +1415,7 @@
   },
   {
     "id": 102,
-    "verb": "sweep",
+    "present": "sweep",
     "simple": "swept",
     "participle": "swept",
     "matched": false,
@@ -1429,7 +1429,7 @@
   },
   {
     "id": 103,
-    "verb": "swim",
+    "present": "swim",
     "simple": "swam",
     "participle": "swum",
     "matched": false,
@@ -1443,7 +1443,7 @@
   },
   {
     "id": 104,
-    "verb": "take",
+    "present": "take",
     "simple": "took",
     "participle": "taken",
     "matched": false,
@@ -1457,7 +1457,7 @@
   },
   {
     "id": 105,
-    "verb": "teach",
+    "present": "teach",
     "simple": "taught",
     "participle": "taught",
     "matched": false,
@@ -1471,7 +1471,7 @@
   },
   {
     "id": 106,
-    "verb": "tear",
+    "present": "tear",
     "simple": "tore",
     "participle": "torn",
     "matched": false,
@@ -1485,7 +1485,7 @@
   },
   {
     "id": 107,
-    "verb": "tell",
+    "present": "tell",
     "simple": "told",
     "participle": "told",
     "matched": false,
@@ -1499,7 +1499,7 @@
   },
   {
     "id": 108,
-    "verb": "think",
+    "present": "think",
     "simple": "thought",
     "participle": "thought",
     "matched": false,
@@ -1513,7 +1513,7 @@
   },
   {
     "id": 109,
-    "verb": "throw",
+    "present": "throw",
     "simple": "threw",
     "participle": "thrown",
     "matched": false,
@@ -1527,7 +1527,7 @@
   },
   {
     "id": 110,
-    "verb": "tread",
+    "present": "tread",
     "simple": "trode",
     "participle": "trodden/trod",
     "matched": false,
@@ -1541,7 +1541,7 @@
   },
   {
     "id": 111,
-    "verb": "understand",
+    "present": "understand",
     "simple": "understood",
     "participle": "understood",
     "matched": false,
@@ -1555,7 +1555,7 @@
   },
   {
     "id": 112,
-    "verb": "wake",
+    "present": "wake",
     "simple": "woke",
     "participle": "woken",
     "matched": false,
@@ -1569,7 +1569,7 @@
   },
   {
     "id": 113,
-    "verb": "wear",
+    "present": "wear",
     "simple": "wore",
     "participle": "worn",
     "matched": false,
@@ -1583,7 +1583,7 @@
   },
   {
     "id": 114,
-    "verb": "weave",
+    "present": "weave",
     "simple": "wove",
     "participle": "woven",
     "matched": false,
@@ -1597,7 +1597,7 @@
   },
   {
     "id": 115,
-    "verb": "weep",
+    "present": "weep",
     "simple": "wept",
     "participle": "wept",
     "matched": false,
@@ -1611,7 +1611,7 @@
   },
   {
     "id": 116,
-    "verb": "win",
+    "present": "win",
     "simple": "won",
     "participle": "won",
     "matched": false,
@@ -1625,7 +1625,7 @@
   },
   {
     "id": 117,
-    "verb": "wring",
+    "present": "wring",
     "simple": "wrung",
     "participle": "wrung",
     "matched": false,
@@ -1639,7 +1639,7 @@
   },
   {
     "id": 118,
-    "verb": "write",
+    "present": "write",
     "simple": "wrote",
     "participle": "written",
     "matched": false,

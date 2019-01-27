@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <Button android:id="@+id/manual_verb_button"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="@string/verb_default"
+            android:textColor="@color/whiteColor"
+            android:background="@drawable/verb_selected"
+    />
+
+</LinearLayout>

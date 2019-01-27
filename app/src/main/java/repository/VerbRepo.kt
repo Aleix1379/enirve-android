@@ -4,19 +4,29 @@ import android.content.Context
 import com.google.gson.GsonBuilder
 import model.Verb
 
-class VerbRepo(private val context: Context) {
+class VerbRepo(context: Context) {
 
-    fun getAllVerbs(): ArrayList<Verb> {
-        val json = context.assets.open("verbs.json").readBytes().toString(Charsets.UTF_8)
+    private val mContext: Context = context
+    private var mVerbs: ArrayList<Verb>? = null
+
+    private fun loadVerbs(): ArrayList<Verb> {
+        val json = mContext.assets.open("verbs.json").readBytes().toString(Charsets.UTF_8)
 
         val gsonBuilder = GsonBuilder().serializeNulls()
         val gson = gsonBuilder.create()
 
-        return ArrayList (gson.fromJson(json, Array<Verb>::class.java).toList())
+        return ArrayList(gson.fromJson(json, Array<Verb>::class.java).toList())
+    }
+
+    fun getAllVerbs(): ArrayList<Verb> {
+        if (mVerbs == null) {
+            mVerbs = loadVerbs()
+        }
+        return mVerbs!!
     }
 
     fun getRandomVerbs(max: Int): List<Verb> {
-        val verbs: ArrayList<Verb> = getAllVerbs()
+        val verbs: ArrayList<Verb> = ArrayList(getAllVerbs())
         val result: ArrayList<Verb> = ArrayList()
 
         for (i in 1..max) {
@@ -26,6 +36,17 @@ class VerbRepo(private val context: Context) {
         }
 
         return result
+    }
+
+    fun getVerbs(searchText: String): List<Verb> {
+        if (searchText.isEmpty()) {
+            return getAllVerbs()
+        }
+        return getAllVerbs().filter {
+            it.present.contains(searchText, true) ||
+                    it.simple.contains(searchText, false) ||
+                    it.participle.contains(searchText, false)
+        }
     }
 
 }
