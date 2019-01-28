@@ -1,5 +1,6 @@
 package com.aleixmp.enirve.ui
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -12,6 +13,7 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import com.aleixmp.enirve.R
 import com.aleixmp.enirve.model.Verb
+import com.google.gson.Gson
 import info.hoang8f.android.segmented.SegmentedGroup
 
 
@@ -54,7 +56,15 @@ class SelectionVerbsActivity : AppCompatActivity(),
         mBtnNextChooseVerbs = findViewById(R.id.button_next_choose_verbs)
 
         mBtnNextChooseVerbs.setOnClickListener {
+            val intent = Intent(this, PracticeActivity::class.java)
 
+            val gson = Gson()
+            val json = gson.toJson(mVerbsSelected)
+            intent.putExtra(PracticeActivity.PARAM_VERBS, json)
+            intent.putExtra(PracticeActivity.PARAM_DURATION_TYPE, mDurationType)
+            intent.putExtra(PracticeActivity.PARAM_DURATION_VALUE, mDurationValue)
+
+            startActivity(intent)
         }
 
         setDescriptionChooseMode(resources.getString(R.string.mode_choose_verbs_all_description))
