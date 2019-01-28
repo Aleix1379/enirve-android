@@ -5,7 +5,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/frame_layout_mode_choose_verbs_background"
             android:padding="24dp"
-            tools:context=".ui.ChooseVerbsAllFragment">
+            tools:context="com.aleixmp.enirve.ui.ChooseVerbsAllFragment">
 
     <TextView
             android:id="@+id/text_choose_all"

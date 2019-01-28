@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentTransaction
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.aleixmp.enirve.R
-import com.aleixmp.numberpicker.NumberPicker
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),

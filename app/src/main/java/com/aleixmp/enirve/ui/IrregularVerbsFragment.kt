@@ -49,15 +49,15 @@ class IrregularVerbsFragment : Fragment(), View.OnClickListener {
         npOptionValue = view.findViewById(R.id.np_option_value_container) as NumberPicker
         mBtnNextHome = view.findViewById(R.id.button_next_home) as Button
 
-        setDescriptionDurationType(timeDescription ,timeOption)
+        setDescriptionDurationType(timeDescription , timeOption)
 
         mSegmentedGroup!!.setOnCheckedChangeListener { _, checkedId: Int ->
             val radioTime: RadioButton = view.findViewById(R.id.rb_duration_type_time)
 
             if (radioTime.id == checkedId) {
-                setDescriptionDurationType(timeDescription ,timeOption)
+                setDescriptionDurationType(timeDescription , timeOption)
             } else {
-                setDescriptionDurationType(repetitionsDescription ,repetitionOption)
+                setDescriptionDurationType(repetitionsDescription , repetitionOption)
             }
 
         }

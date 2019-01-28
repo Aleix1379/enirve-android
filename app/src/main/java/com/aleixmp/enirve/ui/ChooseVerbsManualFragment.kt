@@ -14,7 +14,7 @@ import android.widget.TextView
 import com.aleixmp.enirve.R
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import model.Verb
+import com.aleixmp.enirve.model.Verb
 
 class ChooseVerbsManualFragment : Fragment() {
     private var listener: OnFragmentInteractionListener? = null
@@ -51,6 +51,7 @@ class ChooseVerbsManualFragment : Fragment() {
             mVerbsSelected = ArrayList (gson.fromJson(json, Array<Verb>::class.java).toList())
 
             mTxtChooseManual.text = mVerbsSelected.toString().replace("[", "").replace("]","")
+            listener?.onVerbsSelected(mVerbsSelected)
 
             if (mTxtChooseManual.text.isEmpty()) {
                 mTxtChooseManual.text = resources.getString(R.string.choose_manual)
@@ -74,7 +75,7 @@ class ChooseVerbsManualFragment : Fragment() {
     }
 
     interface OnFragmentInteractionListener {
-        fun onFragmentInteraction(uri: Uri)
+        fun onVerbsSelected(verbs: List<Verb>)
     }
 
     companion object {

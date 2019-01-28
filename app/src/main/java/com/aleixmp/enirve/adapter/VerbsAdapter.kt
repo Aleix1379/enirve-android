@@ -1,4 +1,4 @@
-package adapter
+package com.aleixmp.enirve.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.BaseAdapter
 import android.widget.Button
 import com.aleixmp.enirve.R
 import com.aleixmp.enirve.ui.ChooseManualVerbsActivity
-import model.Verb
+import com.aleixmp.enirve.model.Verb
 
 
 class VerbsAdapter(private var mActivity: ChooseManualVerbsActivity, private var verbs: List<Verb>) : BaseAdapter() {

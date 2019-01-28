@@ -1,4 +1,4 @@
-package model
+package com.aleixmp.enirve.model
 
 import com.google.gson.annotations.SerializedName
 

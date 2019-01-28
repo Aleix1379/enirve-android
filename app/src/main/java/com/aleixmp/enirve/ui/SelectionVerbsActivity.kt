@@ -1,20 +1,18 @@
 package com.aleixmp.enirve.ui
 
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentTransaction
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import com.aleixmp.enirve.R
+import com.aleixmp.enirve.model.Verb
 import info.hoang8f.android.segmented.SegmentedGroup
-import model.Verb
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 
 
 class SelectionVerbsActivity : AppCompatActivity(),
@@ -24,17 +22,12 @@ class SelectionVerbsActivity : AppCompatActivity(),
     ChooseVerbsManualFragment.OnFragmentInteractionListener,
     ChooseVerbsByLevelFragment.OnFragmentInteractionListener {
 
-    override fun onFragmentInteraction(uri: Uri) {
-        TODO("not implemented")
-        Log.d(mTAG, "Uri: $uri")
-    }
+    private lateinit var mBtnNextChooseVerbs: Button
+    private var mVerbsSelected: List<Verb>? = null
 
-//    enum class ModeChooseVerbs {
-//        ALL,
-//        RANDOM,
-//        MANUAL,
-//        BY_LEVEL
-//    }
+    override fun onVerbsSelected(verbs: List<Verb>) {
+        mVerbsSelected = verbs
+    }
 
     private val mTAG = "SelectionVerbsActivity"
 
@@ -53,11 +46,16 @@ class SelectionVerbsActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selection_verbs)
 
-        mDurationType = intent.getStringExtra(SelectionVerbsActivity.DURATION_TYPE)
-        mDurationValue = intent.getIntExtra(SelectionVerbsActivity.DURATION_VALUE, -1)
+        mDurationType = intent.getStringExtra(DURATION_TYPE)
+        mDurationValue = intent.getIntExtra(DURATION_VALUE, -1)
 
         mSegmentedModeChooseVerbs = findViewById(R.id.sg_mode_choose_verbs)
         mTxtModeChooseVerbsescription = findViewById(R.id.text_mode_choose_verbs_description)
+        mBtnNextChooseVerbs = findViewById(R.id.button_next_choose_verbs)
+
+        mBtnNextChooseVerbs.setOnClickListener {
+
+        }
 
         setDescriptionChooseMode(resources.getString(R.string.mode_choose_verbs_all_description))
         setFragmentChooseMode(ChooseVerbsAllFragment.newInstance())

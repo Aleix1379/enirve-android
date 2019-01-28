@@ -11,8 +11,9 @@ import android.widget.Button
 import android.widget.TextView
 
 import com.aleixmp.enirve.R
+import com.aleixmp.enirve.model.Verb
 import com.aleixmp.numberpicker.NumberPicker
-import repository.VerbRepo
+import com.aleixmp.enirve.repository.VerbRepo
 
 class ChooseVerbsRandomFragment : Fragment(), NumberPicker.OnValueChanged {
     private var listener: OnFragmentInteractionListener? = null
@@ -20,7 +21,7 @@ class ChooseVerbsRandomFragment : Fragment(), NumberPicker.OnValueChanged {
     private var mTxtChooseRandom: TextView? = null
     private var btnRefreshRandom: Button? = null
 
-    private var mMaxRandomVerbs = 1
+    private var mMaxRandomVerbs = 5
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_choose_verbs_random, container, false)
@@ -28,6 +29,7 @@ class ChooseVerbsRandomFragment : Fragment(), NumberPicker.OnValueChanged {
         mTxtChooseRandom = view.findViewById(R.id.text_choose_random)
 
         npRandomValue = view.findViewById(R.id.np_random_value_container)
+        npRandomValue!!.setValue(mMaxRandomVerbs)
         npRandomValue!!.setOnValueChangedListener(this)
 
         btnRefreshRandom = view.findViewById(R.id.button_refresh_reandom)
@@ -52,7 +54,7 @@ class ChooseVerbsRandomFragment : Fragment(), NumberPicker.OnValueChanged {
     }
 
     interface OnFragmentInteractionListener {
-        fun onFragmentInteraction(uri: Uri)
+        fun onVerbsSelected(verbs: List<Verb>)
     }
 
     override fun onUpdateValue(newValue: Int) {
@@ -65,6 +67,7 @@ class ChooseVerbsRandomFragment : Fragment(), NumberPicker.OnValueChanged {
         val verbs = verbRepo.getRandomVerbs(mMaxRandomVerbs)
 
         mTxtChooseRandom!!.text = verbs.toString().replace("[", "").replace("]", "")
+        listener?.onVerbsSelected(verbs)
     }
 
     companion object {

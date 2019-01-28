@@ -1,8 +1,8 @@
-package repository
+package com.aleixmp.enirve.repository
 
 import android.content.Context
 import com.google.gson.GsonBuilder
-import model.Verb
+import com.aleixmp.enirve.model.Verb
 
 class VerbRepo(context: Context) {
 

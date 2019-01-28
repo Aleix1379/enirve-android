@@ -1,6 +1,5 @@
 package com.aleixmp.enirve.ui
 
-import adapter.VerbsAdapter
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -13,10 +12,11 @@ import android.widget.EditText
 import android.widget.GridView
 import android.widget.TextView
 import com.aleixmp.enirve.R
+import com.aleixmp.enirve.adapter.VerbsAdapter
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import model.Verb
-import repository.VerbRepo
+import com.aleixmp.enirve.model.Verb
+import com.aleixmp.enirve.repository.VerbRepo
 
 
 class ChooseManualVerbsActivity : AppCompatActivity(), TextWatcher {

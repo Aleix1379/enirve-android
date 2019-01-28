@@ -10,7 +10,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 
 import com.aleixmp.enirve.R
-import repository.VerbRepo
+import com.aleixmp.enirve.model.Verb
+import com.aleixmp.enirve.repository.VerbRepo
 
 class ChooseVerbsAllFragment : Fragment() {
     private var listener: OnFragmentInteractionListener? = null
@@ -26,6 +27,8 @@ class ChooseVerbsAllFragment : Fragment() {
         val verbs = verbRepo.getAllVerbs()
 
         mTxtChooseAll!!.text = verbs.toString().replace("[", "").replace("]","")
+
+        listener?.onVerbsSelected(verbs)
 
         return view
     }
@@ -45,7 +48,7 @@ class ChooseVerbsAllFragment : Fragment() {
     }
 
     interface OnFragmentInteractionListener {
-        fun onFragmentInteraction(uri: Uri)
+        fun onVerbsSelected(verbs: List<Verb>)
     }
 
     companion object {

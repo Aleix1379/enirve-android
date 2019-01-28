@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.aleixmp.enirve.R
+import com.aleixmp.enirve.model.Verb
 
 class ChooseVerbsByLevelFragment : Fragment() {
     private var listener: OnFragmentInteractionListener? = null
@@ -35,7 +36,7 @@ class ChooseVerbsByLevelFragment : Fragment() {
     }
 
     interface OnFragmentInteractionListener {
-        fun onFragmentInteraction(uri: Uri)
+        fun onVerbsSelected(verbs: List<Verb>)
     }
 
     companion object {
