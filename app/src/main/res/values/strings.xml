@@ -46,5 +46,16 @@
     <string name="manula_verbs_deselect_all">Deselect All</string>
     <string name="manula_verbs_select_all">Select All</string>
     <string name="choose_manual">You\'ve no chosen any verb</string>
+    <string name="practice_title_repetitions">Completed %d of %d</string>
+    <string name="practice_success">Success: %d</string>
+    <string name="practice_errors">Errors: %d</string>
+    <string name="practice_verb">Verb: %s</string>
+    <string name="practice_past_simple_hint">Enter the past simple</string>
+    <string name="practice_past_participle_hint">Enter the past participle</string>
+    <string name="practice_check">check</string>
+    <string name="practice_next">next</string>
+    <string name="practice_show_result">show the results</string>
+    <string name="practice_error">error</string>
+    <string name="practice_correct">icon correct</string>
 
 </resources>

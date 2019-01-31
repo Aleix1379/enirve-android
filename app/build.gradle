@@ -35,4 +35,5 @@ dependencies {
     implementation 'info.hoang8f:android-segmented:1.0.6'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.aleixmp.numberpicker:numberpicker:1.0.2'
+    implementation 'com.akexorcist:RoundCornerProgressBar:2.0.3'
 }
