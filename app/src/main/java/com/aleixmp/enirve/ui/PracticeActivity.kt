@@ -1,9 +1,12 @@
 package com.aleixmp.enirve.ui
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.os.Handler
 import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.View
 import android.widget.*
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
@@ -11,15 +14,24 @@ import com.aleixmp.enirve.R
 import com.aleixmp.enirve.model.Verb
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import java.util.*
+import kotlin.concurrent.fixedRateTimer
+
 
 class PracticeActivity : AppCompatActivity(), View.OnClickListener {
     private var mVerbsSelected: ArrayList<Verb>? = null
     private var mDurationType: String = ""
     private var mDurationValue: Int = -1
-    private val mTag: String = "PracticeActivity"
+    private var mDurationSeconds: Int = -1
+    private val mTag: String = "EnirvePracticeActivity"
     private var mLimitRepetitions: Int = -1
     private var mCurrentIndex: Int = 0
     private var mCurrentVerb: Verb? = null
+
+    private val handler = Handler()
+    private lateinit var txtProgressbar: TextView
+    private lateinit var mDrawableProgressbarByTime: Drawable
+    private lateinit var mProgress: ProgressBar
 
     private var mSuccess: Int = 0
     private var mErrors: Int = 0
@@ -27,6 +39,7 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var mRdLimitPractice: RoundCornerProgressBar
     private lateinit var mTxtTitleRepetitions: TextView
     private lateinit var mClProgressbarRepetitions: ConstraintLayout
+    private lateinit var mClProgressbarTime: ConstraintLayout
     private lateinit var mTextViewPracticeSuccess: TextView
     private lateinit var mTextViewPracticeError: TextView
     private lateinit var mTextViewPracticeVerb: TextView
@@ -49,6 +62,7 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
         loadParams()
         loadViews()
         initData()
+        setupProgressbar()
 
         if (mDurationType == "repetitions") {
             initRepetitionsPractice()
@@ -65,7 +79,10 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun getCurrentVerb(): Verb {
-        return mVerbsSelected!![mCurrentIndex]
+        return if (mDurationType == "repetitions") {
+            mVerbsSelected!![mCurrentIndex]
+        } else //if (mDurationType == "time") {
+            mVerbsSelected!![mCurrentIndex % mVerbsSelected!!.size]
     }
 
     private fun getNextVerb(): Verb {
@@ -79,6 +96,25 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun initTimePractice() {
         mClProgressbarRepetitions.visibility = View.GONE
+        mClProgressbarTime.visibility = View.VISIBLE
+
+        mDurationSeconds = mDurationValue * 60
+
+/*        val myTimer = Timer()
+        myTimer.schedule(object : TimerTask() {
+            override fun run() {
+                mDurationSeconds -= 1
+                updateProgressbarByTime()
+            }
+        }, 1000)*/
+
+        fixedRateTimer("default", false, 0L, 1000) {
+            mDurationSeconds -= 1
+            Log.d(mTag, "time left: $mDurationSeconds")
+            updateProgressbarByTime()
+            if (mDurationSeconds == 0) cancel()
+        }
+
     }
 
     private fun initRepetitionsPractice() {
@@ -92,9 +128,11 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
         updateRepetitionsTitle()
 
         mClProgressbarRepetitions.visibility = View.VISIBLE
+        mClProgressbarTime.visibility = View.GONE
     }
 
     private fun loadViews() {
+        mClProgressbarTime = findViewById(R.id.cl_progressbar_time_container)
         mClProgressbarRepetitions = findViewById(R.id.cl_progressbar_repetitions_container)
         mTextViewPracticeSuccess = findViewById(R.id.text_view_practice_success)
         mTextViewPracticeError = findViewById(R.id.text_view_practice_error)
@@ -113,10 +151,15 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
         mTxtPracticeCorrectionParticiple = findViewById(R.id.text_view_practice_correction_participle)
         mImvPracticeSimpleOk = findViewById(R.id.practice_simple_ok)
         mImvPracticeParticipleOk = findViewById(R.id.practice_participle_ok)
+        txtProgressbar = findViewById<View>(R.id.text_view_progressbar_practice) as TextView
+        mProgress = findViewById<View>(R.id.circularProgressbar) as ProgressBar
+        mDrawableProgressbarByTime = resources.getDrawable(R.drawable.circular)
     }
 
     private fun updateProgressbar() {
-        mRdLimitPractice.progress = getPercentage()
+        if (mDurationType == "repetitions") {
+            mRdLimitPractice.progress = getPercentage()
+        }
     }
 
     private fun updateErrorValue(value: Int) {
@@ -140,10 +183,12 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun updateRepetitionsTitle() {
-        mTxtTitleRepetitions.text = getString(
-            R.string.practice_title_repetitions,
-            (mSuccess + mErrors), mLimitRepetitions
-        )
+        if (mDurationType == "repetitions") {
+            mTxtTitleRepetitions.text = getString(
+                R.string.practice_title_repetitions,
+                (mSuccess + mErrors), mLimitRepetitions
+            )
+        }
     }
 
     private fun getPercentage(): Float {
@@ -152,27 +197,33 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(button: View?) {
-        if (button != null) {
-            if (button.tag == "check") {
-                checkVerb()
-                updateRepetitionsTitle()
-                updateProgressbar()
-                toggleVisivilityButtons(false)
-            } else if (button.tag == "next") {
-                nextVerb()
-                cleanEditText()
-                toggleVisivilityButtons(true)
-                mEdtPastSimple.requestFocus()
-            } else if (button.tag == "results") {
-//                Toast.makeText(baseContext, "Success: $mSuccess Errors: $mErrors", Toast.LENGTH_LONG).show()
-                val intent = Intent(this, ResultActivity::class.java)
-                val gson = Gson()
-                intent.putExtra(ResultActivity.PARAM_VERBS, gson.toJson(mVerbsSelected))
-                intent.putExtra(ResultActivity.PARAM_SUCCESS, mSuccess)
-                intent.putExtra(ResultActivity.PARAM_ERRORS, mErrors)
-                intent.putExtra(ResultActivity.PARAM_DURATION_TYPE, mDurationType)
-                intent.putExtra(ResultActivity.PARAM_DURATION_VALUE, mDurationValue)
-                startActivity(intent)
+        button?.let {
+            when {
+                it.tag == "check" -> {
+                    checkVerb()
+                    updateRepetitionsTitle()
+                    updateProgressbar()
+                    toggleVisivilityButtons(false)
+                }
+                it.tag == "next" -> {
+                    nextVerb()
+                    cleanEditText()
+                    toggleVisivilityButtons(true)
+                    mEdtPastSimple.requestFocus()
+                }
+                it.tag == "results" -> {
+                    //                Toast.makeText(baseContext, "Success: $mSuccess Errors: $mErrors", Toast.LENGTH_LONG).show()
+                    val intent = Intent(this, ResultActivity::class.java)
+                    val gson = Gson()
+                    intent.putExtra(ResultActivity.PARAM_VERBS, gson.toJson(mVerbsSelected))
+                    intent.putExtra(ResultActivity.PARAM_SUCCESS, mSuccess)
+                    intent.putExtra(ResultActivity.PARAM_ERRORS, mErrors)
+                    intent.putExtra(ResultActivity.PARAM_DURATION_TYPE, mDurationType)
+                    intent.putExtra(ResultActivity.PARAM_DURATION_VALUE, mDurationValue)
+                    startActivity(intent)
+                }
+                else -> {
+                }
             }
         }
     }
@@ -191,8 +242,14 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun checkVerb() {
-        val resultPastSimple = verbValidation(mEdtPastSimple.text.toString(), mCurrentVerb!!.simple)// == mEdtPastSimple.text.toString().toLowerCase().trim()
-        val resultPastParticiple = verbValidation(mEdtPastParticiple.text.toString(), mCurrentVerb!!.participle)//mCurrentVerb!!.participle == mEdtPastParticiple.text.toString().toLowerCase().trim()
+        val resultPastSimple = verbValidation(
+            mEdtPastSimple.text.toString(),
+            mCurrentVerb!!.simple
+        )// == mEdtPastSimple.text.toString().toLowerCase().trim()
+        val resultPastParticiple = verbValidation(
+            mEdtPastParticiple.text.toString(),
+            mCurrentVerb!!.participle
+        )//mCurrentVerb!!.participle == mEdtPastParticiple.text.toString().toLowerCase().trim()
 
 //        resposta == verb.split("/")[0] ||
 //                resposta. == verb.split("/")[1]
@@ -240,12 +297,12 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
     ) {
         when {
             isCorrect -> {
-                layout.visibility = View.GONE
+                layout.visibility = View.INVISIBLE
                 imgOk.visibility = View.VISIBLE
             }
             else -> {
                 layout.visibility = View.VISIBLE
-                imgOk.visibility = View.GONE
+                imgOk.visibility = View.INVISIBLE
             }
         }
         editText.text = correction
@@ -267,23 +324,66 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
             mBtnPracticeNext.visibility = View.GONE
         }
 
-        if (!next && mCurrentIndex == mLimitRepetitions - 1) {
+        if ((mDurationType == "repetitions" && !next && mCurrentIndex == mLimitRepetitions - 1) ||
+            mDurationType == "time" && mDurationSeconds == 0
+        ) {
             mBtnPracticeCheck.visibility = View.GONE
             mBtnPracticeNext.visibility = View.GONE
             mBtnPracticeShowTheResults.visibility = View.VISIBLE
-
-            /*
-
-            val gson = Gson()
-            val json = gson.toJson(mVerbsSelected)
-            intent.putExtra(PracticeActivity.PARAM_VERBS, json)
-            intent.putExtra(PracticeActivity.PARAM_DURATION_TYPE, mDurationType)
-            intent.putExtra(PracticeActivity.PARAM_DURATION_VALUE, mDurationValue)
-
-            */
-
         }
 
+    }
+
+    private fun setupProgressbar() {
+        mProgress.progress = 0
+        mProgress.secondaryProgress = 100
+        mProgress.max = 100
+        mProgress.progressDrawable = mDrawableProgressbarByTime
+
+        updateProgressbarByTime()
+    }
+
+    private fun updateProgressbarByTime() {
+
+        runOnUiThread {
+            // Stuff that updates the UI
+            mProgress.progress = getPercentageByTime()
+            txtProgressbar.text = getTextProgressbarByTime()
+        }
+
+    }
+
+    private fun getTextProgressbarByTime(): CharSequence? {
+        val hours = mDurationSeconds / 3600
+        val minutes = (mDurationSeconds - hours * 3600) / 60
+        val seconds = mDurationSeconds - hours * 3600 - minutes * 60
+
+        var strHours = hours.toString()
+        var strMinutes = minutes.toString()
+        var strSeconds = seconds.toString()
+
+        if (hours < 10) {
+            strHours = "0$hours"
+        }
+        if (minutes < 10) {
+            strMinutes = "0$minutes"
+        }
+        if (seconds < 10) {
+            strSeconds = "0$seconds"
+        } else if (seconds == 0) {
+            strSeconds = "0"
+        }
+
+        if (mDurationSeconds < 60) {
+            return strSeconds
+        } else if (mDurationSeconds < 3600) {
+            return "$strMinutes:$strSeconds"
+        }
+        return "$strHours:$strMinutes:$strSeconds"
+    }
+
+    private fun getPercentageByTime(): Int {
+        return (mDurationSeconds * 100) / (mDurationValue * 60)
     }
 
     companion object {
