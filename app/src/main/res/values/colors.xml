@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <color name="primaryColor">#3F51B5</color>
-        <color name="primaryLightColor">#757CE8</color>
-        <color name="primaryDarkColor">#002884</color>
-        <color name="primaryTextColor">#FFFFFF</color>
-        <color name="secondaryColor">#FFA526</color>
-        <color name="secondaryLightColor">#FFD85B</color>
-        <color name="secondaryDarkColor">#C67700</color>
-        <color name="secondaryTextColor">#222222</color>
-        <color name="primaryGreen">#4CAF4F</color>
-        <color name="primaryRed">#F44235</color>
-        <color name="whiteColor">#FFFFFF</color>
-        <color name="blackColor">#222222</color>
-        <color name="darkColor">#424242</color>
+    <color name="primaryColor">#3F51B5</color>
+    <color name="primaryLightColor">#757CE8</color>
+    <color name="primaryDarkColor">#002884</color>
+    <color name="primaryTextColor">#FFFFFF</color>
+    <color name="secondaryColor">#FFA526</color>
+    <color name="secondaryLightColor">#FFD85B</color>
+    <color name="secondaryDarkColor">#C67700</color>
+    <color name="secondaryTextColor">#222222</color>
+    <color name="primaryGreen">#4CAF4F</color>
+    <color name="primaryRed">#F44235</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="blackColor">#222222</color>
+    <color name="darkColor">#424242</color>
+    <color name="black_overlay">#66000000</color>
+
 </resources>
 
 

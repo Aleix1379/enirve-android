@@ -58,4 +58,13 @@
     <string name="practice_error">error</string>
     <string name="practice_correct">icon correct</string>
 
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="result_title">Success percentage</string>
+    <string name="result_success">Success: %d</string>
+    <string name="result_errors">Errors: %d</string>
+    <string name="result_finish">finish</string>
+    <string name="result_repeat">repeat</string>
+
 </resources>

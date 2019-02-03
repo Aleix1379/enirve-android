@@ -1,5 +1,6 @@
 package com.aleixmp.enirve.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
@@ -8,6 +9,7 @@ import android.widget.*
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
 import com.aleixmp.enirve.R
 import com.aleixmp.enirve.model.Verb
+import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 
 class PracticeActivity : AppCompatActivity(), View.OnClickListener {
@@ -80,7 +82,7 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun initRepetitionsPractice() {
-        mLimitRepetitions = mVerbsSelected!!.size * mDurationValue
+        mLimitRepetitions = mVerbsSelected!!.size
 
         mRdLimitPractice = findViewById(R.id.rc_limit_practice)
         updateProgressbar()
@@ -162,7 +164,15 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
                 toggleVisivilityButtons(true)
                 mEdtPastSimple.requestFocus()
             } else if (button.tag == "results") {
-                Toast.makeText(baseContext, "Success: $mSuccess Errors: $mErrors", Toast.LENGTH_LONG).show()
+//                Toast.makeText(baseContext, "Success: $mSuccess Errors: $mErrors", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, ResultActivity::class.java)
+                val gson = Gson()
+                intent.putExtra(ResultActivity.PARAM_VERBS, gson.toJson(mVerbsSelected))
+                intent.putExtra(ResultActivity.PARAM_SUCCESS, mSuccess)
+                intent.putExtra(ResultActivity.PARAM_ERRORS, mErrors)
+                intent.putExtra(ResultActivity.PARAM_DURATION_TYPE, mDurationType)
+                intent.putExtra(ResultActivity.PARAM_DURATION_VALUE, mDurationValue)
+                startActivity(intent)
             }
         }
     }
@@ -181,8 +191,11 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun checkVerb() {
-        val resultPastSimple = mCurrentVerb!!.simple == mEdtPastSimple.text.toString().toLowerCase()
-        val resultPastParticiple = mCurrentVerb!!.participle == mEdtPastParticiple.text.toString().toLowerCase()
+        val resultPastSimple = verbValidation(mEdtPastSimple.text.toString(), mCurrentVerb!!.simple)// == mEdtPastSimple.text.toString().toLowerCase().trim()
+        val resultPastParticiple = verbValidation(mEdtPastParticiple.text.toString(), mCurrentVerb!!.participle)//mCurrentVerb!!.participle == mEdtPastParticiple.text.toString().toLowerCase().trim()
+
+//        resposta == verb.split("/")[0] ||
+//                resposta. == verb.split("/")[1]
 
         setInputCorrection(
             mClPastSimpleError,
@@ -207,6 +220,15 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
             updateErrorValue(++mErrors)
         }
 
+    }
+
+    private fun verbValidation(newValue: String, verb: String): Boolean {
+        return if (verb.contains("/")) {
+            newValue.toLowerCase().trim() == verb.split("/")[0] ||
+                    newValue.toLowerCase().trim() == verb.split("/")[1]
+        } else {
+            newValue.toLowerCase().trim() == verb
+        }
     }
 
     private fun setInputCorrection(
@@ -249,6 +271,17 @@ class PracticeActivity : AppCompatActivity(), View.OnClickListener {
             mBtnPracticeCheck.visibility = View.GONE
             mBtnPracticeNext.visibility = View.GONE
             mBtnPracticeShowTheResults.visibility = View.VISIBLE
+
+            /*
+
+            val gson = Gson()
+            val json = gson.toJson(mVerbsSelected)
+            intent.putExtra(PracticeActivity.PARAM_VERBS, json)
+            intent.putExtra(PracticeActivity.PARAM_DURATION_TYPE, mDurationType)
+            intent.putExtra(PracticeActivity.PARAM_DURATION_VALUE, mDurationValue)
+
+            */
+
         }
 
     }

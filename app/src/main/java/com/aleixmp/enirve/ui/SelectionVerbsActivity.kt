@@ -58,6 +58,8 @@ class SelectionVerbsActivity : AppCompatActivity(),
         mBtnNextChooseVerbs.setOnClickListener {
             val intent = Intent(this, PracticeActivity::class.java)
 
+            updateVerbsSelectionByRepetitions()
+
             val gson = Gson()
             val json = gson.toJson(mVerbsSelected)
             intent.putExtra(PracticeActivity.PARAM_VERBS, json)
@@ -71,6 +73,16 @@ class SelectionVerbsActivity : AppCompatActivity(),
         setFragmentChooseMode(ChooseVerbsAllFragment.newInstance())
 
         mSegmentedModeChooseVerbs!!.setOnCheckedChangeListener(this)
+    }
+
+    private fun updateVerbsSelectionByRepetitions() {
+        val verbs: ArrayList<Verb> = ArrayList()
+        if (mDurationType == "repetitions") {
+            for (i in 0 until mVerbsSelected!!.size * mDurationValue) {
+                verbs.add(mVerbsSelected!![i % mVerbsSelected!!.size])
+            }
+            mVerbsSelected = verbs
+        }
     }
 
     private fun setDescriptionChooseMode(description: String) {
